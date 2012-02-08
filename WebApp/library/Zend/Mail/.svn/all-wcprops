@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/2012/ecoparc/!svn/ver/109/trunk/WebApp/library/Zend/Mail
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/2012/ecoparc/!svn/ver/75/trunk/WebApp/library/Zend/Mail/Exception.php
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/2012/ecoparc/!svn/ver/75/trunk/WebApp/library/Zend/Mail/Message.php
+END
+Storage.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/2012/ecoparc/!svn/ver/75/trunk/WebApp/library/Zend/Mail/Storage.php
+END
+Part.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/2012/ecoparc/!svn/ver/75/trunk/WebApp/library/Zend/Mail/Part.php
+END

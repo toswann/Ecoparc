@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Weight
+END
+Empty.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Weight/Empty.php
+END
+Boolean.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Weight/Boolean.php
+END
+MultiTerm.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Weight/MultiTerm.php
+END
+Phrase.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Weight/Phrase.php
+END
+Term.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Weight/Term.php
+END

@@ -1,0 +1,27 @@
+<HTML>
+  <HEAD>
+    <TITLE>Ecoparc CGI Request Generator2</TITLE>
+    <script type="text/javascript">
+      function encodeurl()
+      {
+      var uri = document.getElementById("url").value;
+      document.getElementById("url").value = encodeURIComponent(uri);
+      document.frm.submit();
+      }
+      function putXmlMessage()
+      {
+      document.getElementById("url").value = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><message><MACAddress>00:11:18:5b:3a:1f</MACAddress><IPAddress>192.168.1.1</IPAddress><messageID>1</messageID></message>";
+      }
+    </script>
+  </HEAD>
+  <BODY onLoad="putXmlMessage();">
+    <H1 ALIGN=CENTER>Ecoparc CGI Request Sender</H1>
+    <HR>
+    <FORM NAME="frm" METHOD="POST" ACTION="https://localhost/cgi-bin/a.php">
+      Modify your XML Request Here :<BR>The 3 arguments are :<br />- MACAddress<br />- IPAddress<br />- messageID<br />
+      <TEXTAREA ID="url" NAME="message" COLS=90 ROWS=20></TEXTAREA><BR>
+      <button href="#" onClick="javascript:encodeurl();" NAME="submit">Send !</button>
+    </FORM>
+    <HR>
+  </BODY>
+</HTML>

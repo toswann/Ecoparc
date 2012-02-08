@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Pdf/Resource/Font
+END
+Simple.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Pdf/Resource/Font/Simple.php
+END
+Type0.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Pdf/Resource/Font/Type0.php
+END
+Extracted.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Pdf/Resource/Font/Extracted.php
+END
+FontDescriptor.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Pdf/Resource/Font/FontDescriptor.php
+END
+CidFont.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Pdf/Resource/Font/CidFont.php
+END

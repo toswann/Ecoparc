@@ -1,0 +1,62 @@
+;
+;This file is part of Ecoparc.
+;
+;Ecoparc is free software: you can redistribute it and/or modify
+;it under the terms of the GNU General Public License as published by
+;the Free Software Foundation, either version 3 of the License, or
+;(at your option) any later version.
+;
+;Ecoparc is distributed in the hope that it will be useful,
+;but WITHOUT ANY WARRANTY; without even the implied warranty of
+;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;GNU General Public License for more details.
+;
+;You should have received a copy of the GNU General Public License
+;along with Ecoparc.  If not, see <http:;www.gnu.org/licenses/>.
+;
+; language file for users
+[section]
+lang = en
+Ordinateur = "Computer"
+Groupe_d\'ordinateur = "Computer Group"
+Date_de_début = "Start date"
+Date_de_fin = "End date"
+Statut = "Status"
+valider_form = "Validate"
+selectReport = "Select Reporting"
+typeReport = "Type of Reporting"
+reportByComp = "Reporting by Computer"
+reportByGp = "Reporting by Group"
+reportByAll = "Reporting by All Computers"
+chooseGpCom = "Select computers or groups (maximum 10)"
+SelectOrdiGp = "Select computers of groups"
+SelectStartEndDate = "Select the start and end date of the reporting"
+computerSelection = "Computer selection :"
+period = "Period"
+unite = "Unity"
+StartDate = "from"
+EndDate = "to"
+
+act_min = "Activity in minutes"
+jour_ut = "Days of use"
+temps_act = "Activity time of the groups in minutes"
+conso_w = "Consumption in Watt"
+
+conso_grp_k = "Group consumption in Kilo Watt"
+conso_kw = "Group consumption in Kilowatt"
+conso_grp = "Group consumption in Watt"
+conso_prc = "Infrastructure consumption in Watt"
+conso_prc_k = "Infrastructure consumption in Kilo Watt"
+conso_ordi = "Computers consumption in Watt"
+conso_ordi_k = "Computers sonsumption in Kilo Watt"
+em_kg = "Discharge in kilograms of CO2"
+temps_act_ordi = "Activity time of computers in minutes"
+temps_act_parc = "Infrastructure activity time in minutes"
+
+rep_by_com = "Reporting by computers"
+rep_by_grp = "Reporting by groups"
+rep_by_parc = "Infrastructure reporting"
+
+reporting_normal = "Reporting"
+reporting_audit = "Reporting with audit"
+sel_comp = "Select computers groups:"

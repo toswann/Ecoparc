@@ -1,0 +1,293 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<script id="source" type="text/javascript">
+$(document).ready(function() {
+// Initialisation buttons
+<?php if ($this->computerDataFormated) { ?>
+var chart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'container',
+         zoomType: 'x',
+         defaultSeriesType: 'areaspline'
+      },
+      title: {
+         text: "<?php echo $this->graphTitle ?>"
+      },
+      legend: {
+         layout: 'vertical',
+         align: 'left',
+         verticalAlign: 'top',
+         x: 70,
+         y: 35,
+         floating: true,
+         borderWidth: 1
+      },
+      xAxis: {
+         title: {
+            text: "<?php echo $this->xTitle ?>"
+         },
+         labels: {
+            enabled: false 
+         },
+         categories: <?php echo $this->computerDataFormated[0]["cat"]; ?>
+      },
+      yAxis: {
+         title: {
+            text: "<?php echo $this->yTitle ?>"
+         }
+      },
+      tooltip: { // format de la bulle dâ€™aide
+         formatter: function() {
+                   return ''+
+               this.x +': '+ this.y +' min';
+         }
+      },
+      credits: {
+         enabled: false
+      },
+      plotOptions: {
+         areaspline: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5
+         }
+      },
+      series: [
+          <?php
+            for ($i = 0; $i < count($this->computerDataFormated); $i++)
+            {
+                if ($i !=0)
+                    echo ",{";
+                else
+                    echo "{";
+                echo "name: 'Ordinateur ".$this->computerDataFormated[$i]["id"]."',\n";// a remplacer par le nom
+                echo "data: ".$this->computerDataFormated[$i]["value"];
+                echo "}";
+            }
+
+          ?>
+            ]
+   });
+
+<?php }  ?>
+
+<?php if ($this->groupDataFormated) { ?>
+var chart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'container',
+         defaultSeriesType: 'areaspline'
+      },
+      title: {
+         text: "<?php echo $this->graphTitle ?>"
+      },
+      legend: {
+         layout: 'vertical',
+         align: 'left',
+         verticalAlign: 'top',
+         x: 70,
+         y: 35,
+         floating: true,
+         borderWidth: 1
+      },
+      xAxis: {
+         categories: <?php echo $this->groupDataFormated[0]["cat"]; ?>
+      },
+      yAxis: {
+         title: {
+            text: "<?php echo $this->yTitle ?>"
+         }
+      },
+      tooltip: { // format de la bulle dâ€™aide
+         formatter: function() {
+                   return ''+
+               this.x +': '+ this.y +' min';
+         }
+      },
+      credits: {
+         enabled: false
+      },
+      plotOptions: {
+         areaspline: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5
+         }
+      },
+      series: [
+          <?php
+            for ($i = 0; $i < count($this->groupDataFormated); $i++)
+            {
+                if ($i !=0)
+                    echo ",{";
+                else
+                    echo "{";
+                echo "name: '".$this->groupDataFormated[$i]["id"]."',\n";// a remplacer par le nom
+                echo "data: ".$this->groupDataFormated[$i]["value"];
+                echo "}";
+            }
+
+          ?>
+            ]
+   });
+
+<?php }  ?>
+
+        $("#report_ord" ).button();
+        $("#report_gp" ).button();
+        $("#valid_form" ).button();
+
+        // Initialisation selecteur multiples grace a Chosen
+        $(".chzn-select").chosen();
+        
+        // Initialisation Datepicker
+       $(function() {
+        var dates = $( "#date_begin, #date_end" ).datepicker({
+                showAnim: 'slideDown',
+                changeMonth: true,
+                numberOfMonths: 1,
+                dateFormat: 'dd-mm-yy',
+                dayNamesMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+                minDate: '14-12-2011',
+                //maxDate: '',
+                /*
+                onSelect: function( selectedDate ) {
+                        var option = this.id == "date_begin" ? "minDate" : "maxDate",
+                                instance = $( this ).data( "datepicker" ),
+                                date = $.datepicker.parseDate(
+                                        instance.settings.dateFormat ||
+                                        $.datepicker._defaults.dateFormat,
+                                        selectedDate, instance.settings );
+                        dates.not( this ).datepicker( "option", option, date );
+                    console.log(this.id + " " + selectedDate );
+                }*/
+            });
+          });
+              /*  onClose: function( selectedDate ) {
+                        var option = this.id == "from" ? "minDate" : "maxDate",
+                                instance = $( this ).data( "datepicker" ),
+                                date = $.datepicker.parseDate(
+                                        instance.settings.dateFormat ||
+                                        $.datepicker._defaults.dateFormat,
+                                        selectedDate, instance.settings );
+                        dates.not( this ).datepicker( "option", option, date );*/
+                   //alert(this.id + " " + selectedDate )
+               /*  }
+              });
+
+
+            }); */
+
+
+
+     $("#valid_form").click(function(){
+     //$('#loader').fadeIn("fast");
+            var id = "";
+            var type = "";
+            i=0;
+            $("select[name='data'] option:selected").each(function () {
+                if (i==0)
+                    id += $(this).val();
+                else
+                    id += "-" + $(this).val();
+                i++;
+              });
+            
+                type = $("#type option:selected").val();
+            
+                date_debut = $("#date_begin").val();
+                date_fin = $("#date_end").val();
+                
+                console.log("id:"+id+" date_debut:"+date_debut+ " date_fin:"+date_fin);
+
+               // url = $(this).attr("action");
+                /*$.get("/reporting", {id:id,type:type,date_begin:date_debut,date_end:date_fin,ajax:true},function(data){
+                   //$('#loader').fadeOut("fast");
+                   if (data.error == "no"){
+                        ;
+                    }
+                    else{
+                            ;
+                        }
+                }, "json");
+                
+                
+                return false;*/
+    
+                window.location = "/reporting?data="+id+"&type="+type+"&date_begin="+date_debut+"&date_end="+date_fin;
+            });
+
+});
+
+
+</script>
+<div id="standard-content">
+<div class="title">Reporting</div>
+<br/>
+    <div id="select_report">
+         <div id="step1_select_report">
+             <div id="title_typeReport"><?=$this->translate->_('selectReport')?></div>
+             <select data-placeholder="<?=$this->translate->_('typeReport')?>"style="width:250px;" tabindex="1" class="chzn-select"  id="type" name="type">
+                <option value=""></option>
+                <option value="o"><?=$this->translate->_('reportByComp')?></option>
+                <!--<option value="g"><?/*=$this->translate->_('reportByGp')*/?></option>-->
+                <!--<option value="a"><?/*=$this->translate->_('reportByAll')*/?></option>-->
+             </select>
+        </div>
+        <div id="step2_select_report">
+            <div>
+                <div id="title_form"><?=$this->translate->_('chooseGpCom')?></div>
+                <select data-placeholder="<?=$this->translate->_('SelectOrdiGp')?>" style="width:250px;" class="chzn-select" multiple tabindex="6" name="data">
+                    <option value=""></option>
+                    <?php foreach ($this->groupNames as $group){?>
+                    <optgroup label="<?php echo $group->nom;?>">
+                        <?php foreach ($this->computerNames as $computer){
+                        if ($group->id_groupe_ordinateur == $computer->groupe_ordinateur_id_groupe_ordinateur)
+                        {?>
+                        <option id="option" class="dataToReport" value="<?=$computer->id_ordinateur?>"><?=$computer->nom?></option>
+                        <?php }}?>
+                    </optgroup>
+                 <?php } ?>
+            </select>
+            </div>
+        </div>
+        <!--
+        <div id="step2_select_report">
+            <div>
+                <div id="title_form"><?//=$this->translate->_('chooseGpCom')?></div>
+                <select data-placeholder="<?//=$this->translate->_('SelectOrdiGp')?>" style="width:250px;" class="chzn-select" multiple tabindex="6" name="data">
+                    <option value=""></option>
+                        <?php //foreach ($this->groupNames as $group){?>
+                        <option id="option" class="dataToReport" value="<?//=$group->id_groupe_ordinateur?>"><?//=$group->nom?></option>
+                        <?php //}?>
+            </select>
+            </div>
+        </div>
+        -->
+        <div id="step3_select_report">
+            <div id="title_form2"><?=$this->translate->_('SelectStartEndDate')?></div>
+            <label for="date_begin"><?=$this->translate->_('StartDate')?></label>
+            <input type="text" id="date_begin" name="date_begin" class="input_date"/>
+            <label for="date_end"><?=$this->translate->_('EndDate')?></label>
+            <input type="text" id="date_end" name="date_end" class="input_date"/>
+            <div class="create"><input type="submit" id="valid_form"/></div>
+        </div>
+    </div>
+<br/><br/>
+<div style="display:none; margin-left:500px;" id="loader"><img src="images/loader-grey.gif" height="42" width="42" />Loading, please wait...</div>
+<div id="container">
+
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

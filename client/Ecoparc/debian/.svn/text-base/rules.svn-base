@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/qmake.mk
+QMAKE=qmake-qt4
+
+
+
+# dh_installinit
+# 	cp -R $(CURDIR)/ressources/debian/etc $(DEB_DESTDIR)
+# 	chmod +x $(DEB_DESTDIR)etc/init.d/ecoparc
+
+	
+install/ecoparc::
+	mkdir $(DEB_DESTDIR)usr/
+	mkdir $(DEB_DESTDIR)usr/bin/
+	cp $(CURDIR)/ecoparc $(DEB_DESTDIR)usr/bin/
+	mkdir $(DEB_DESTDIR)usr/share/
+	mkdir $(DEB_DESTDIR)usr/share/applications/
+	cp $(CURDIR)/ressources/languages/ecoparc_fr.qm $(CURDIR)/ressources/debian/locale/fr/LC_MESSAGES/ecoparc_fr.qm 
+	cp $(CURDIR)/ressources/languages/ecoparc_en.qm $(CURDIR)/ressources/debian/locale/en/LC_MESSAGES/ecoparc_en.qm 
+	cp -R $(CURDIR)/ressources/debian/applications $(DEB_DESTDIR)usr/share/
+	cp -R $(CURDIR)/ressources/debian/icons $(DEB_DESTDIR)usr/share/
+	cp -R $(CURDIR)/ressources/debian/locale $(DEB_DESTDIR)usr/share/
+	cp -R $(CURDIR)/ressources/debian/etc $(DEB_DESTDIR)
+	chmod +x $(DEB_DESTDIR)etc/init.d/ecoparc
+	find $(DEB_DESTDIR) -name .svn -print0 | xargs -0 rm -rf

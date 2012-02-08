@@ -1,0 +1,68 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $( "#ann_audit" ).button();
+    });
+</script>
+
+<div id="standard-content">
+<div id="data-users">
+<div class="title"><?=$this->translate->_('gest_config')?></div>
+<h2><?=$this->translate->_('conf_client')?></h2>
+
+<?=$this->form?>
+
+
+<br /><br />
+
+<h2><?=$this->translate->_('audit_')?></h2>
+    <?php
+    
+    if ($this->auditMode == "completed")
+    {
+        echo $this->translate->_('com_audit');
+    }
+    else if ($this->auditMode == true)
+    {
+        
+        echo $this->translate->_('jour_rest')." ".$this->days;
+         ?>
+<br /><br />
+
+            <a href="<?php echo $this->url(array('controller'=>'config', 'action'=>'stopaudit'));?>">
+                <button id="ann_audit"><?=$this->translate->_('ann_audit')?></button>
+            </a>
+        <?php
+    }
+    else if ($this->auditMode == false)
+    {
+        ?>
+            <a href="<?php echo $this->url(array('controller'=>'config', 'action'=>'startaudit'));?>">
+                <button id="ann_audit"><?=$this->translate->_('comm_audit')?></button>
+            </a>
+        <?php
+    }
+
+    ?>
+
+</div>
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/132/trunk/WebApp/library/Zend/Cloud/DocumentService/Adapter
+END
+SimpleDb.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/2012/ecoparc/!svn/ver/132/trunk/WebApp/library/Zend/Cloud/DocumentService/Adapter/SimpleDb.php
+END
+WindowsAzure.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/2012/ecoparc/!svn/ver/132/trunk/WebApp/library/Zend/Cloud/DocumentService/Adapter/WindowsAzure.php
+END
+AbstractAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/2012/ecoparc/!svn/ver/132/trunk/WebApp/library/Zend/Cloud/DocumentService/Adapter/AbstractAdapter.php
+END

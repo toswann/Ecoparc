@@ -1,0 +1,15 @@
+K 10
+svn:ignore
+V 162
+release
+debug
+Makefile.Release
+object_script.Ecoparc.Release
+object_script.Ecoparc.Debug
+Makefile.Debug
+qrc_ressources.cpp
+moc_os.cpp
+moc_ecoparc.cpp
+Ecoparc.app
+
+END

@@ -1,0 +1,42 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $( ".reporting" ).button();
+    });
+</script>
+<div id="standard-content">
+<div class="title">Reporting</div>
+<br />
+
+<div id="reporting-menu">
+    <div id="reporting-computer" class="reporting-button">
+        <a href="<?php echo $this->url(array('controller'=>'reporting',    'action'=>'bycomputer'));?>"><button class="reporting"><?=$this->translate->_('rep_by_com')?></button></a>
+    </div>
+    <div id="reporting-group" class="reporting-button">
+        <a href="<?php echo $this->url(array('controller'=>'reporting',    'action'=>'bygroup'));?>"><button class="reporting"><?=$this->translate->_('rep_by_grp')?></button></a>
+    </div>
+    <div id="reporting-parc" class="reporting-button">
+        <a href="<?php echo $this->url(array('controller'=>'reporting',    'action'=>'byparc'));?>"><button class="reporting"><?=$this->translate->_('rep_by_parc')?></button></a>
+    </div>
+</div>
+
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

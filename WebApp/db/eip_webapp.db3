@@ -1,0 +1,70 @@
+-- 
+-- This file is part of Ecoparc.
+-- 
+-- Ecoparc is free software: you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or
+-- (at your option) any later version.
+-- 
+-- Ecoparc is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+-- 
+-- You should have received a copy of the GNU General Public License
+-- along with Ecoparc.  If not, see <http:;www.gnu.org/licenses/>.
+-- 
+-- COMMAND : sqlite3 -init eip_webapp.db3 eip_webapp_compiled.db3
+CREATE TABLE IF NOT EXISTS "groupe_ordinateur" (
+  "id_groupe_ordinateur" INTEGER PRIMARY KEY NOT NULL,
+  "planning_id_planning" INTEGER NOT NULL,
+  "nom_groupe" text DEFAULT NULL,
+  "description" text DEFAULT NULL
+);
+CREATE TABLE IF NOT EXISTS "ordinateur" (
+  "id_ordinateur" INTEGER PRIMARY KEY NOT NULL,
+  "nom" text DEFAULT NULL,
+  "description" text DEFAULT NULL,
+  "groupe_ordinateur_id_groupe_ordinateur" INTEGER NOT NULL,
+  "statut" INTEGER DEFAULT NULL,
+  "mac_address" text DEFAULT NULL,
+  "id_ordinateur_type" INTEGER DEFAULT NULL
+);
+CREATE TABLE IF NOT EXISTS "planning" (
+  "id_planning" INTEGER PRIMARY KEY NOT NULL,
+  "nom" text DEFAULT NULL,
+  "description" text DEFAULT NULL
+);
+CREATE TABLE IF NOT EXISTS "planning_taches" (
+  "id_planning_tache" INTEGER PRIMARY KEY NOT NULL,
+  "planning_id_planning" INTEGER NOT NULL,
+  "nom" text NOT NULL,
+  "jour" INTEGER DEFAULT NULL,
+  "heure_debut" time DEFAULT NULL,
+  "heure_fin" time DEFAULT NULL,
+  "action" INTEGER DEFAULT NULL
+);
+CREATE TABLE IF NOT EXISTS "reporting" (
+  "id" INTEGER PRIMARY KEY NOT NULL,
+  "id_ordinateur" INTEGER NOT NULL,
+  "is_audit" INTEGER NOT NULL,
+  "date" date DEFAULT NULL,
+  "last_received" time DEFAULT NULL,
+  "temps" INTEGER DEFAULT NULL
+);
+CREATE TABLE IF NOT EXISTS "users" (
+  "id_user" INTEGER PRIMARY KEY NOT NULL,
+  "username" text DEFAULT NULL,
+  "password" text DEFAULT NULL,
+  "type" INTEGER DEFAULT NULL
+);
+CREATE TABLE IF NOT EXISTS "ordinateur_type" (
+  "id_ordinateur_type" INTEGER PRIMARY KEY NOT NULL,
+  "nom_type" text DEFAULT NULL,
+  "conso" INTEGER DEFAULT NULL
+);
+INSERT INTO users values("1", 'toto', 'f71dbe52628a3f83a77ab494817525c6', '2');
+INSERT INTO users values("2", 'admin', '21232f297a57a5a743894a0e4a801fc3', '2');
+INSERT INTO groupe_ordinateur values("1", "1", "waitingGroup", "waitingGroup");
+INSERT INTO planning values("1", "waitingPlanning", "waitingPlanning");
+INSERT INTO ordinateur_type values("1", "defautType", "100");

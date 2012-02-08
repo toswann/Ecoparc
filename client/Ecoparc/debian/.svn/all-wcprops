@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/2012/ecoparc/!svn/ver/785/trunk/client/Ecoparc/debian
+END
+control
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/2012/ecoparc/!svn/ver/783/trunk/client/Ecoparc/debian/control
+END
+files
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/files
+END
+compat
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/compat
+END
+stamp-makefile-install
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/stamp-makefile-install
+END
+ecoparc.debhelper.log
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/ecoparc.debhelper.log
+END
+changelog
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/changelog
+END
+ecoparc.substvars
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/ecoparc.substvars
+END
+copyright
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/copyright
+END
+docs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/docs
+END
+rules
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/2012/ecoparc/!svn/ver/756/trunk/client/Ecoparc/debian/rules
+END
+stamp-makefile-build
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/2012/ecoparc/!svn/ver/573/trunk/client/Ecoparc/debian/stamp-makefile-build
+END

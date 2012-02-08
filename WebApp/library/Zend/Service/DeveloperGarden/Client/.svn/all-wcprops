@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Client
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Client/Exception.php
+END
+ClientAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Client/ClientAbstract.php
+END
+Soap.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Client/Soap.php
+END

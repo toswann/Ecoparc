@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Analysis/TokenFilter
+END
+LowerCaseUtf8.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Analysis/TokenFilter/LowerCaseUtf8.php
+END
+ShortWords.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Analysis/TokenFilter/ShortWords.php
+END
+LowerCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Analysis/TokenFilter/LowerCase.php
+END
+StopWords.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Analysis/TokenFilter/StopWords.php
+END

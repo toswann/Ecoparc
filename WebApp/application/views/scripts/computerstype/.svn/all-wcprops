@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/2012/ecoparc/!svn/ver/588/trunk/WebApp/application/views/scripts/computerstype
+END
+del.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/2012/ecoparc/!svn/ver/521/trunk/WebApp/application/views/scripts/computerstype/del.phtml
+END
+mod.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/2012/ecoparc/!svn/ver/521/trunk/WebApp/application/views/scripts/computerstype/mod.phtml
+END
+index.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/2012/ecoparc/!svn/ver/588/trunk/WebApp/application/views/scripts/computerstype/index.phtml
+END

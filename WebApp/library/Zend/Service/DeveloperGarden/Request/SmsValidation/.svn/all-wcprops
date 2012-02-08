@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SmsValidation
+END
+GetValidatedNumbers.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SmsValidation/GetValidatedNumbers.php
+END
+SendValidationKeyword.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SmsValidation/SendValidationKeyword.php
+END
+Validate.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SmsValidation/Validate.php
+END
+Invalidate.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SmsValidation/Invalidate.php
+END

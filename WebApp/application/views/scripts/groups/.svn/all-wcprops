@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/2012/ecoparc/!svn/ver/588/trunk/WebApp/application/views/scripts/groups
+END
+del.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/521/trunk/WebApp/application/views/scripts/groups/del.phtml
+END
+mod.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/521/trunk/WebApp/application/views/scripts/groups/mod.phtml
+END
+index.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/2012/ecoparc/!svn/ver/588/trunk/WebApp/application/views/scripts/groups/index.phtml
+END

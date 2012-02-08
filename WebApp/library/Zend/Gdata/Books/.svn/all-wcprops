@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/2012/ecoparc/!svn/ver/111/trunk/WebApp/library/Zend/Gdata/Books
+END
+VolumeEntry.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/111/trunk/WebApp/library/Zend/Gdata/Books/VolumeEntry.php
+END
+VolumeFeed.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/2012/ecoparc/!svn/ver/111/trunk/WebApp/library/Zend/Gdata/Books/VolumeFeed.php
+END
+CollectionEntry.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/2012/ecoparc/!svn/ver/111/trunk/WebApp/library/Zend/Gdata/Books/CollectionEntry.php
+END
+VolumeQuery.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/111/trunk/WebApp/library/Zend/Gdata/Books/VolumeQuery.php
+END
+CollectionFeed.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/2012/ecoparc/!svn/ver/111/trunk/WebApp/library/Zend/Gdata/Books/CollectionFeed.php
+END

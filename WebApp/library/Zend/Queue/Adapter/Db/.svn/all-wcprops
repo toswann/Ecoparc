@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Adapter/Db
+END
+postgresql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Adapter/Db/postgresql.sql
+END
+mysql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Adapter/Db/mysql.sql
+END
+queue_sqlite.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Adapter/Db/queue_sqlite.sql
+END
+sqlsrv.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Adapter/Db/sqlsrv.sql
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Adapter/Db/Message.php
+END
+Queue.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Adapter/Db/Queue.php
+END

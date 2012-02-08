@@ -1,0 +1,164 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<script type="text/javascript">
+$(document).ready(function() {
+
+               $('.e_description').editable(function (value, settings) {
+                    plan = $(this).attr("class").split(" ")[1];
+                    url = "/planning/mod/a/description/id_planning/"+plan+"/description/"+value;
+                    $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_desc')?>") : alerts("<?=$this->translate->_('mod_desc')?>");
+                    });
+                  return(value);
+              },{
+                tooltip   : "Click to edit...",
+                style  : "inherit"
+              });
+               $('.e_nom').editable(function (value, settings) {
+                    plan = $(this).attr("class").split(" ")[1];
+                    url = "/planning/mod/a/nom/id_planning/"+plan+"/nom/"+value;
+                    $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_nom')?>") : alerts("<?=$this->translate->_('mod_nom')?>");
+                    });
+                    return(value);
+                },{
+                tooltip   : "Click to edit...",
+                style  : "inherit"
+              });
+              $('.del_planning').live("click", function () {
+                  plan_id = $(this).attr("class").split(" ")[1];
+                  elem = this;
+                  $("#confirmation").html("");
+                  plan_nom = $(elem).parent().children(".e_nom,."+plan_id).html();
+                  $("#confirmation").html("<?=$this->translate->_('plann_confirm')?> " + plan_nom + " ?");
+                  $("#confirmation").dialog({
+			resizable: false,
+                        title : "Confirmation",
+                        closeOnEscape: true,
+			buttons: {
+				"Supprimer": function() {
+					$("#confirmation").dialog( "close" );
+                                        url = "/planning/del/id_planning/"+plan_id;
+                                        $.get(url, function(data) {
+                                            if (data != "ok") {
+                                                errors("<?=$this->translate->_('imp_plann')?>");
+                                            }
+                                            else {
+                                                alerts("<?=$this->translate->_('supp_plann')?>");
+                                                $(elem).parent().remove();
+                                            }
+                                        });
+				},
+				"Annuler": function() {
+					$("#confirmation").dialog("close");
+				}
+			}
+                  });
+               });
+
+              $( "#form-planning" ).dialog({
+			autoOpen: false,
+			height: 350,
+			width: 350,
+			modal: true,
+                        closeOnEscape: true,
+                        title : "<?=$this->translate->_('new_plann')?>"
+		});
+                if ($(".errors").html()) {
+                    $( "#form-planning" ).dialog( "open" );
+                }
+
+            $("#Send").button();
+
+            $( "#create-planning" ).button();
+
+            $( "#create-planning" ).click(function() {
+			$( "#form-planning" ).dialog( "open" );
+            });
+
+});
+</script>
+<div id="standard-content">
+<div id="confirmation"></div>
+<div class="title"><?=$this->translate->_('Planning')?></div>
+<div class="create"><button id="create-planning"><?=$this->translate->_('creat_new_plann')?></button></div>
+<div id="data-planning">
+    <table cellpadding="0" cellspacing="0" border="0" class="display" id="datatable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th><?=$this->translate->_('nom_planning')?></th>
+                <th><?=$this->translate->_('description')?></th>
+                <th><?=$this->translate->_('voir')?></th>
+                <th><?=$this->translate->_('supprimer')?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+     foreach ($this->allPlannings as $planning) {
+         if ($planning['id_planning'] != 1) {
+?>
+        <tr>
+            <td><? echo $planning['id_planning']; ?></td>
+            <td class="e_nom <?=$planning['id_planning'] ?>"><? echo $planning['nom']; ?></td>
+            <td class="e_description <?=$planning['id_planning'] ?>"><? echo $planning['description']; ?></td>
+            <td>
+                <a href="<?php echo $this->url(array('controller'=>'planning', 'action'=>'view', 'id_planning'=>$planning['id_planning']));?>">
+                    <div class="e_bouton_view">
+                        <img alt="" onmouseover="this.src = '/images/visu/view.gif'"
+                             onmouseout="this.src = '/images/visu/view-h.gif'"
+                             src="/images/visu/view-h.gif"/>
+                    </div>
+                </a>
+            </td>
+            <td class="del_planning <?=$planning['id_planning'] ?> cursorpointer">
+                <div class="e_bouton_delete">
+                    <img alt="" onmouseover="this.src = '/images/visu/delete-h.gif'"
+                             onmouseout="this.src = '/images/visu/delete.gif'"
+                             src="/images/visu/delete.gif"/>
+                </div>
+            </td>
+        </tr>
+<?php } else {
+?>
+        <tr>
+            <td><? echo $planning['id_planning']; ?></td>
+            <td><? echo $planning['nom']; ?></td>
+            <td><? echo $planning['description']; ?></td>
+            <td><a href="<?php echo $this->url(array('controller'=>'planning', 'action'=>'view', 'id_planning'=>$planning['id_planning']));?>">
+                <div class="e_bouton_view"><img alt="" onmouseover="this.src = '/images/visu/view.gif'"
+                         onmouseout="this.src = '/images/visu/view-h.gif'"
+                         src="/images/visu/view-h.gif"/></div>
+                </a></td>
+            <td><div class="e_centered_text"><?=$this->translate->_('undeletable')?></div></td>
+        </tr>
+<?php 
+}
+}
+?>
+        </tbody>
+    </table>
+</div>
+
+    <div id="form-planning">
+        <?= $this->form ?>
+    </div>
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

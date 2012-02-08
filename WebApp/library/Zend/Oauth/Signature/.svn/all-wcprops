@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/2012/ecoparc/!svn/ver/74/trunk/WebApp/library/Zend/Oauth/Signature
+END
+Rsa.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/2012/ecoparc/!svn/ver/74/trunk/WebApp/library/Zend/Oauth/Signature/Rsa.php
+END
+SignatureAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/2012/ecoparc/!svn/ver/74/trunk/WebApp/library/Zend/Oauth/Signature/SignatureAbstract.php
+END
+Hmac.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/2012/ecoparc/!svn/ver/74/trunk/WebApp/library/Zend/Oauth/Signature/Hmac.php
+END
+Plaintext.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/2012/ecoparc/!svn/ver/74/trunk/WebApp/library/Zend/Oauth/Signature/Plaintext.php
+END

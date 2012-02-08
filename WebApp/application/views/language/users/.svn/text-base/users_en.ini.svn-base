@@ -1,0 +1,33 @@
+;
+;This file is part of Ecoparc.
+;
+;Ecoparc is free software: you can redistribute it and/or modify
+;it under the terms of the GNU General Public License as published by
+;the Free Software Foundation, either version 3 of the License, or
+;(at your option) any later version.
+;
+;Ecoparc is distributed in the hope that it will be useful,
+;but WITHOUT ANY WARRANTY; without even the implied warranty of
+;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;GNU General Public License for more details.
+;
+;You should have received a copy of the GNU General Public License
+;along with Ecoparc.  If not, see <http:;www.gnu.org/licenses/>.
+;
+; language file for users
+[section]
+lang = en
+Username = "User name"
+Groupe = "Group"
+ajouter_ut = "Add user"
+user_0 = "Simple user"
+user_1 = "Reporting user"
+user_2 = "Administrator"
+retour = "Return"
+modifier = "Modify"
+Supprimer = "Delete"
+create_new_user = "Create a new user"
+mod_valid = "User modified."
+sup_valid = "User deleted"
+mod_error = "Impossible to modify this user."
+sup_error = "Impossible to delete this user."

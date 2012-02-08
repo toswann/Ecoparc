@@ -1,0 +1,13 @@
+#!C:\Program Files (x86)\strawberry\perl\bin\perl.exe
+
+print "Content-type:text/plain\n\n";
+
+read(STDIN, $line, $ENV{'CONTENT_LENGTH'});
+
+@values = split(/&/, $line);
+
+($varname, $data) = split(/=/, $values[0]);
+
+my @args = ("javaw", "-jar", "cgi-bin.jar", "$data");
+
+$returnedValues = system(@args);

@@ -1,0 +1,90 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?= $this->doctype('XHTML1_STRICT')?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$this->translate->_('lang')?>" lang="<?=$this->translate->_('lang')?>">
+<head>
+    <title><?=$this->title?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="<?=$this->meta_content?>" />
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+    <link rel='stylesheet' type='text/css' href='/css/chosen.css' />
+    <link rel="stylesheet" href="/css/architecture.css" type="text/css" />
+    <link rel="stylesheet" href="/css/autre.css" type="text/css" />
+    <link rel="stylesheet" href="/css/reporting.css" type="text/css" />
+<!--    <link rel="stylesheet" href="/css/demo_page.css" type="text/css" />
+    <link rel="stylesheet" href="/css/demo_table.css" type="text/css" />-->
+    <link rel="stylesheet" href="/css/demo_table_jui.css" type="text/css" />
+    <link rel="stylesheet" href="/css/jquery-ui-1.8.9.custom.css" type="text/css" />
+    <link rel='stylesheet' type='text/css' href='/css/jquery-ui-1.8.9.custom.css' />
+    <link rel='stylesheet' type='text/css' href='/css/jquery.weekcalendar.css' />
+    <?php echo $this->render('js/application.phtml'); ?>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui-1.8.9.custom.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.error-alert.custom.js" type="text/javascript"></script>
+    <script src="/js/application.js" type="text/javascript"></script>
+    <script src="/js/jquery.jeditable.js" type="text/javascript"></script>
+    <script src="/js/highcharts.js" type="text/javascript"></script>
+    <script src="/js/modules/exporting.js" type="text/javascript"></script>
+    <script src="/js/themes/grid.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/chosen.jquery.min.js"></script>
+    <?php echo $this->render('js/jquery.dataTables.min.phtml'); ?>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            $('#datatable').dataTable({
+             bJQueryUI : true,
+             sPaginationType: "full_numbers"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="global">
+        <div id="header">
+            <div id="bandeau">
+                <div id="submenu">
+                    <?php /*echo "hello ".$this->username.'  '.$this->type;*/ ?>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li class="first"><a <?= $this->actualView == "member" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller'=>'member',    'action'=>'index'));?>"><span><?=$this->translate->_('Accueil')?></span></a></li>
+                        <?php if ($this->type == 2) {?>
+                        <li><a <?= $this->actualView == "users" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller'=>'users',     'action'=>'index'));?>"><span><?=$this->translate->_('Gestion_Utilisateur')?></span></a></li>
+                        <li><a <?= $this->actualView == "computers" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller'=>'computers', 'action'=>'index'));?>"><span><?=$this->translate->_('Gestion_Ordinateur')?></span></a></li>
+                        <li><a <?= $this->actualView == "groups" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller'=>'groups',    'action'=>'index'));?>"><span><?=$this->translate->_('Gestion_Groupe')?></span></a></li>
+
+                        <li><a <?= $this->actualView == "planning" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller'=>'planning',  'action'=>'index'));?>"><span><?=$this->translate->_('Planning')?></span></a></li>
+                        <li><a <?= $this->actualView == "reporting" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller'=>'reporting', 'action'=>'index'));?>"><span><?=$this->translate->_('Reporting')?></span></a></li>
+                        <li><a <?= $this->actualView == "computerstype" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller'=>'computerstype', 'action'=>'index'));?>"><span><?=$this->translate->_('computerstype')?></span></a></li>
+                        <li><a <?= $this->actualView == "config" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller'=>'config', 'action'=>'index'));?>"><span><?=$this->translate->_('config')?></span></a></li>
+ 
+                       <?php } ?>
+                        <li><a <?= $this->actualView == "help" ? 'class = "checked_menu" ' : ''; ?> href="<?php echo $this->url(array('controller' =>'help',     'action'=>'index')); ?>"><span><?=$this->translate->_('Aide')?></span></a></li>
+                        <li class="last"><a href="<?php echo $this->url(array('controller'=>'index',     'action'=>'logout'));?>"><span><?=$this->translate->_('deco')?></span></a></li>
+                    </ul>
+                    
+                </div>
+<!--                <div id="sous-menu-gestion menu">
+                    <a href="<?php echo $this->url(array('controller'=>'config', 'action'=>'index'));?>"><span><?=$this->translate->_('config')?></span></a>
+                </div>-->
+                
+            </div>
+        </div>
+        <div id="big-content">
+            <div id="error-alert"></div>

@@ -1,0 +1,3 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule !\.(js|ico|gif|jpg|png|css|swf|txt)$ index.php

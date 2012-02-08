@@ -1,0 +1,499 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<script type="text/javascript">
+$(document).ready(function() {
+    
+<?php if ($this->parcDataFormated) {  ?>
+var timechart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'time-graph-container',
+         zoomType: 'x',
+         defaultSeriesType: 'areaspline'
+      },
+      title: {
+         text: "<?php echo $this->timeGraphTitle ?>"
+      },
+      legend: {
+         layout: 'vertical',
+         align: 'left',
+         verticalAlign: 'top',
+         x: 70,
+         y: 0,
+         floating: true,
+         borderWidth: 1
+      },
+      xAxis: {
+         title: {
+            text: "<?php echo $this->timeXTitle ?>"
+         },
+         labels: {
+            enabled: false 
+         },
+         categories: <?php echo $this->parcDataFormated[0]["cat"]; ?>
+      },
+      yAxis: {
+         title: {
+            text: "<?php echo $this->timeYTitle ?>"
+         }
+      },
+      tooltip: { // format de la bulle dâ€™aide
+         formatter: function() {
+                   return ''+
+               this.x +': '+ this.y +' min';
+         }
+      },
+      credits: {
+         enabled: false
+      },
+      plotOptions: {
+         areaspline: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5
+         },
+         line: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5,
+            color: "#FF0000",
+            marker : {
+               enabled: false
+            }
+         }
+      },
+      series: [
+          <?php
+            for ($i = 0; $i < count($this->parcDataFormated); $i++)
+            {
+                if ($this->parcDataFormated[$i]["name"] == "Audit") {
+                    if ($i !=0)
+                        echo ",{";
+                    else
+                        echo "{";
+                    echo 'type: "line",';
+                    echo "name: '".$this->parcDataFormated[$i]["name"]."',\n";// a remplacer par le nom
+                    echo "data: ".$this->parcDataFormated[$i]["value_time"];
+                    echo "}";
+
+                }
+                else {
+                    if ($i !=0)
+                        echo ",{";
+                    else
+                        echo "{";
+                    echo "name: '".$this->parcDataFormated[$i]["name"]."',\n";// a remplacer par le nom
+                    echo "data: ".$this->parcDataFormated[$i]["value_time"];
+                    echo "}";
+                    
+                }
+            }
+
+          ?>
+            ]
+   });
+   
+   var wchart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'w-graph-container',
+         zoomType: 'x',
+         defaultSeriesType: 'areaspline'
+      },
+      title: {
+         text: "<?php echo $this->wGraphTitle ?>"
+      },
+      legend: {
+         layout: 'vertical',
+         align: 'left',
+         verticalAlign: 'top',
+         x: 70,
+         y: 0,
+         floating: true,
+         borderWidth: 1
+      },
+      xAxis: {
+         title: {
+            text: "<?php echo $this->wXTitle ?>"
+         },
+         labels: {
+            enabled: false 
+         },
+         categories: <?php echo $this->parcDataFormated[0]["cat"]; ?>
+      },
+      yAxis: {
+         title: {
+            text: "<?php echo $this->wYTitle ?>"
+         }
+      },
+      tooltip: { // format de la bulle dâ€™aide
+         formatter: function() {
+                   return ''+
+               this.x +': '+ this.y +' Watt';
+         }
+      },
+      credits: {
+         enabled: false
+      },
+      plotOptions: {
+         areaspline: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5
+         },
+         line: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5,
+            color: "#FF0000",
+            marker : {
+               enabled: false
+            }
+         }
+      },
+      series: [
+          <?php
+            for ($i = 0; $i < count($this->parcDataFormated); $i++)
+            {
+                if ($this->parcDataFormated[$i]["name"] == "Audit") {
+                    if ($i !=0)
+                        echo ",{";
+                    else
+                        echo "{";
+                    echo 'type: "line",';
+                    echo "name: '".$this->parcDataFormated[$i]["name"]."',\n";// a remplacer par le nom
+                    echo "data: ".$this->parcDataFormated[$i]["value_w"];
+                    echo "}";
+
+                }
+                else {
+                    if ($i !=0)
+                        echo ",{";
+                    else
+                        echo "{";
+                    echo "name: '".$this->parcDataFormated[$i]["name"]."',\n";// a remplacer par le nom
+                    echo "data: ".$this->parcDataFormated[$i]["value_w"];
+                    echo "}";
+                    
+                }
+            }
+
+          ?>
+            ]
+   });
+   
+   var timechart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'kw-graph-container',
+         zoomType: 'x',
+         defaultSeriesType: 'areaspline'
+      },
+      title: {
+         text: "<?php echo $this->kwGraphTitle ?>"
+      },
+      legend: {
+         layout: 'vertical',
+         align: 'left',
+         verticalAlign: 'top',
+         x: 70,
+         y: 0,
+         floating: true,
+         borderWidth: 1
+      },
+      xAxis: {
+         title: {
+            text: "<?php echo $this->kwXTitle ?>"
+         },
+         labels: {
+            enabled: false 
+         },
+         categories: <?php echo $this->parcDataFormated[0]["cat"]; ?>
+      },
+      yAxis: {
+         title: {
+            text: "<?php echo $this->kwYTitle ?>"
+         }
+      },
+      tooltip: { // format de la bulle dâ€™aide
+         formatter: function() {
+                   return ''+
+               this.x +': '+ this.y +' KW';
+         }
+      },
+      credits: {
+         enabled: false
+      },
+      plotOptions: {
+         areaspline: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5
+         },
+         line: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5,
+            color: "#FF0000",
+            marker : {
+               enabled: false
+            }
+         }
+      },
+      series: [
+          <?php
+            for ($i = 0; $i < count($this->parcDataFormated); $i++)
+            {
+                if ($this->parcDataFormated[$i]["name"] == "Audit") {
+                    if ($i !=0)
+                        echo ",{";
+                    else
+                        echo "{";
+                    echo 'type: "line",';
+                    echo "name: '".$this->parcDataFormated[$i]["name"]."',\n";// a remplacer par le nom
+                    echo "data: ".$this->parcDataFormated[$i]["value_kw"];
+                    echo "}";
+
+                }
+                else {
+                    if ($i !=0)
+                        echo ",{";
+                    else
+                        echo "{";
+                    echo "name: '".$this->parcDataFormated[$i]["name"]."',\n";// a remplacer par le nom
+                    echo "data: ".$this->parcDataFormated[$i]["value_kw"];
+                    echo "}";
+                    
+                }
+            }
+
+          ?>
+            ]
+   });
+
+   var timechart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'co2-graph-container',
+         zoomType: 'x',
+         defaultSeriesType: 'areaspline'
+      },
+      title: {
+         text: "<?php echo $this->co2GraphTitle ?>"
+      },
+      legend: {
+         layout: 'vertical',
+         align: 'left',
+         verticalAlign: 'top',
+         x: 70,
+         y: 0,
+         floating: true,
+         borderWidth: 1
+      },
+      xAxis: {
+         title: {
+            text: "<?php echo $this->co2XTitle ?>"
+         },
+         labels: {
+            enabled: false 
+         },
+         categories: <?php echo $this->parcDataFormated[0]["cat"]; ?>
+      },
+      yAxis: {
+         title: {
+            text: "<?php echo $this->co2YTitle ?>"
+         }
+      },
+      tooltip: { // format de la bulle dâ€™aide
+         formatter: function() {
+                   return ''+
+               this.x +': '+ this.y +' Kg de CO2';
+         }
+      },
+      credits: {
+         enabled: false
+      },
+      plotOptions: {
+         areaspline: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5
+         },
+         line: { // opacitÃ© de lâ€™area
+            fillOpacity: 0.5,
+            color: "#FF0000",
+            marker : {
+               enabled: false
+            }
+         }
+      },
+      series: [
+          <?php
+            for ($i = 0; $i < count($this->parcDataFormated); $i++)
+            {
+                if ($this->parcDataFormated[$i]["name"] == "Audit") {
+                    if ($i !=0)
+                        echo ",{";
+                    else
+                        echo "{";
+                    echo 'type: "line",';
+                    echo "name: '".$this->parcDataFormated[$i]["name"]."',\n";// a remplacer par le nom
+                    echo "data: ".$this->parcDataFormated[$i]["value_co2"];
+                    echo "}";
+
+                }
+                else {
+                    if ($i !=0)
+                        echo ",{";
+                    else
+                        echo "{";
+                    echo "name: '".$this->parcDataFormated[$i]["name"]."',\n";// a remplacer par le nom
+                    echo "data: ".$this->parcDataFormated[$i]["value_co2"];
+                    echo "}";
+                    
+                }
+            }
+
+          ?>
+            ]
+   });
+
+
+<?php }  ?>
+
+    
+        // Initialisation selecteur multiples grace a Chosen
+        $(".chzn-select").chosen();
+        $(".unite").chosen();
+
+        $(function() {
+            $( "#date_begin" ).datepicker({
+                showAnim: 'slideDown',
+                changeMonth: true,
+                numberOfMonths: 1,
+                dateFormat: 'dd-mm-yy',
+                dayNamesMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+                defaultDate: '<?=$this->fromDate?>',
+                maxDate: '<?=$this->toDate?>'
+            });
+            $( "#date_end" ).datepicker({
+                showAnim: 'slideDown',
+                changeMonth: true,
+                numberOfMonths: 1,
+                dateFormat: 'dd-mm-yy',
+                dayNamesMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+                defaultDate: '<?=$this->toDate?>',
+                maxDate: '<?=$this->toDate?>'
+            });
+          });
+          
+        $("#reporting-normal").click(function(){
+            var id = "";
+            i=0;
+            $("select[name='data'] option:selected").each(function () {
+                if (i==0)
+                    id += $(this).val();
+                else
+                    id += "-" + $(this).val();
+                i++;
+              });
+                        
+                date_debut = $("#date_begin").val();
+                date_fin = $("#date_end").val();
+                
+                window.location = "/reporting/byparc/?data="+id+"&date_begin="+date_debut+"&date_end="+date_fin;
+            });
+
+        $("#reporting-audit").click(function(){
+            var id = "";
+            i=0;
+            $("select[name='data'] option:selected").each(function () {
+                if (i==0)
+                    id += $(this).val();
+                else
+                    id += "-" + $(this).val();
+                i++;
+              });
+                        
+                date_debut = $("#date_begin").val();
+                date_fin = $("#date_end").val();
+                    
+                window.location = "/reporting/byparc/?data="+id+"&date_begin="+date_debut+"&date_end="+date_fin+"&audit=1";
+            });
+
+
+        $("#axis-select").change(function() {
+    
+          $("#axis-select option:selected").each(function () {
+              
+                $(".active").addClass("hide");                
+                $(".active").removeClass("active");                
+                
+                var selected = $(this).attr("value");
+                
+                $("#"+selected).addClass("active");                
+                $("#"+selected).removeClass("hide");
+        });
+           
+        });
+        
+    $("#time-graph-container").addClass("active");
+    $("#w-graph-container").addClass("hide");
+    $("#kw-graph-container").addClass("hide");
+    $("#co2-graph-container").addClass("hide");
+
+    $("#reporting-normal" ).button();
+    $("#reporting-audit" ).button();
+});
+</script>
+
+<div id="standard-content" class="bycomputer">
+<div class="title"> <?=$this->translate->_('rep_by_parc')?></div>
+<br />
+<div id="reporting-form">
+        <div class="step">
+            <div class="left text"><?=$this->translate->_('period')?> <?=$this->translate->_('StartDate')?> :</div>
+            <div class="left">
+                <label for="date_begin" class="text step"></label>
+                <input type="text" id="date_begin" value="<?=$this->date_begin?>" name="date_begin" class="input_date"/>
+            </div>
+            <div class="left">
+                <span class="text"><?=$this->translate->_('EndDate')?></span>
+                <input type="text" id="date_end"  value="<?=$this->date_end?>" name="date_end" class="input_date"/>
+            </div>
+        </div>
+        <div class="step">
+            <div class="left but"><button id="reporting-normal"><?=$this->translate->_('reporting_normal')?></button></div>
+         <?php if ($this->audit == true) { ?>   
+            <div class="left"><button id="reporting-audit"><?=$this->translate->_('reporting_audit')?></button></div>
+         <?php } ?>
+        </div>
+        <?php if ($this->parcDataFormated) {  ?>
+        <div class="step">
+            <div class="left text"><?=$this->translate->_('unite')?> : </div>
+            <div class="left">
+                <select id="axis-select" class="unite">
+                    <option value="time-graph-container">Minutes</option>
+                    <option value="w-graph-container">Watt</option>
+                    <option value="kw-graph-container">KiloWatt</option>
+                    <option value="co2-graph-container">CO2</option>
+                </select>
+            </div>
+        </div>        
+        <?php }?>
+    </div>    
+<div class="clear graph-container">
+    <div>
+        <div id="time-graph-container"></div>
+</div>
+    <div>
+        <div id="w-graph-container"></div>
+    </div>
+    <div>
+        <div id="kw-graph-container"></div>
+    </div>
+    <div>
+        <div id="co2-graph-container"></div>
+    </div>
+</div>
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/2012/ecoparc/!svn/ver/78/trunk/WebApp/library/Zend/Http/UserAgent/Storage
+END
+NonPersistent.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/2012/ecoparc/!svn/ver/78/trunk/WebApp/library/Zend/Http/UserAgent/Storage/NonPersistent.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/2012/ecoparc/!svn/ver/78/trunk/WebApp/library/Zend/Http/UserAgent/Storage/Exception.php
+END
+Session.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/2012/ecoparc/!svn/ver/78/trunk/WebApp/library/Zend/Http/UserAgent/Storage/Session.php
+END

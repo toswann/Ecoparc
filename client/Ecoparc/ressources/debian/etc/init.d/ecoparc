@@ -1,0 +1,56 @@
+# chkconfig: 2345 99 05
+# description: ecoparc server
+
+### BEGIN INIT INFO
+# Provides: ecoparc
+# Required-Start: $remote_fs $syslog 
+# Required-Stop: $remote_fs $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-description: ecoparc client
+# Description: Start and stop the ecoparc client.
+### END INIT INFO
+
+RETVAL=0
+export DISPLAY=:0
+
+start() {
+	echo -n ""Starting ecoparc: ""
+
+	# this call actually starts ecoparc.
+	/usr/bin/ecoparc > /dev/null 2>&1 &
+	RETVAL=$?
+	[ $RETVAL -eq 0 ] && echo -n ""done""
+	echo
+	return $RETVAL
+}
+
+stop() {
+	echo -n ""Stopping ecoparc: ""
+	pkill -f ecoparc
+	RETVAL=$?
+	echo
+	[ $RETVAL -eq 0 ] && echo -n ""done""
+	echo
+	return $RETVAL
+}
+
+# See how we were called.
+case ""$1"" in
+start)
+start
+;;
+stop)
+stop
+;;
+restart|reload)
+stop
+sleep 1
+start
+RETVAL=$?
+;;
+*)
+echo ""Usage: $0 {start|stop|restart}""
+exit 1
+esac
+exit $RETVAL

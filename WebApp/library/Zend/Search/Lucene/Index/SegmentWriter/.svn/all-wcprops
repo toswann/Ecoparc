@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Index/SegmentWriter
+END
+DocumentWriter.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Index/SegmentWriter/DocumentWriter.php
+END
+StreamWriter.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Index/SegmentWriter/StreamWriter.php
+END

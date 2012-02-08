@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl
+END
+ODGBaseUserService.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/ODGBaseUserService.xsd
+END
+VoiceButlerService.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/VoiceButlerService.xsd
+END
+SmsValidationUserService.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/SmsValidationUserService.wsdl
+END
+ccsPort.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/ccsPort.wsdl
+END
+localsearch.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/localsearch.wsdl
+END
+IPLocation.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/IPLocation.wsdl
+END
+TokenService.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/TokenService.wsdl
+END
+ccsPort.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/ccsPort.xsd
+END
+SmsService.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/SmsService.wsdl
+END
+ODGBaseUserService.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/ODGBaseUserService.wsdl
+END
+VoiceButlerService.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/VoiceButlerService.wsdl
+END
+localsearch.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/localsearch.xsd
+END
+IPLocation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Wsdl/IPLocation.xsd
+END

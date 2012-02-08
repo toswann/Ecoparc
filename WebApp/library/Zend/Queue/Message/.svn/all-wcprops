@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Message
+END
+Iterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Message/Iterator.php
+END
+PlatformJob.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/2012/ecoparc/!svn/ver/73/trunk/WebApp/library/Zend/Queue/Message/PlatformJob.php
+END

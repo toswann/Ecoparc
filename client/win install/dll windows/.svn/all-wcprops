@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows
+END
+ssleay32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/ssleay32.dll
+END
+QtXml4.dll
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/QtXml4.dll
+END
+libeay32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/libeay32.dll
+END
+QtGui4.dll
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/QtGui4.dll
+END
+libssl32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/libssl32.dll
+END
+libgcc_s_dw2-1.dll
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/libgcc_s_dw2-1.dll
+END
+mingwm10.dll
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/mingwm10.dll
+END
+QtCore4.dll
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/QtCore4.dll
+END
+QtNetwork4.dll
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/365/trunk/client/win%20install/dll%20windows/QtNetwork4.dll
+END

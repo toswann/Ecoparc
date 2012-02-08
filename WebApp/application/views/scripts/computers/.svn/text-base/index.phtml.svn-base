@@ -1,0 +1,135 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<div id="standard-content">
+<script type="text/javascript">
+var statusArray = { '0' : 'En attente', '1' : 'Validé'};
+var groupArray = <?php echo $this->listgroups."}\n" ?>
+var typeArray = <?php echo $this->listtypes."}\n" ?>
+$(document).ready(function() {
+<?php
+     foreach ($this->allComputers as $computer)
+     { ?>
+          $('.e_group').editable(function (value, settings) {
+                id_ordinateur = $(this).attr("class").split(" ")[1];
+                url = "/computers/mod/a/group/id_ordinateur/"+id_ordinateur+"/group/"+value;
+                $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_group')?>") : alerts("<?=$this->translate->_('mod_group')?>");
+                    });
+                return(groupArray[value]);
+          },{
+             data   :  <?php echo $this->listgroups."'selected':'".$computer['groupe_ordinateur_id_groupe_ordinateur']."'}"; ?>,
+             type   : 'select',
+             submit : 'OK'
+          });
+<?php }
+?>
+<?php
+     foreach ($this->allComputers as $computer)
+     { ?>
+          $('.e_type').editable(function (value, settings) {
+                id_ordinateur = $(this).attr("class").split(" ")[1];
+                url = "/computers/mod/a/type/id_ordinateur/"+id_ordinateur+"/type/"+value;
+                $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_type')?>") : alerts("<?=$this->translate->_('mod_type')?>");
+                    });
+                return(typeArray[value]);
+          },{
+             data   :  <?php echo $this->listtypes."'selected':'".$computer['id_ordinateur_type']."'}"; ?>,
+             type   : 'select',
+             submit : 'OK'
+          });
+<?php }
+?>
+  $('.e_status').editable(function (value, settings) {
+        id_ordinateur = $(this).attr("class").split(" ")[1];
+        url = "/computers/mod/a/status/id_ordinateur/"+id_ordinateur+"/status/"+value;
+        $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_stat')?>") : alerts("<?=$this->translate->_('mod_stat')?>");
+                    });
+        return(statusArray[value]);
+  },{
+     data   :  statusArray,
+     type   : 'select',
+     submit : 'OK'
+  });
+  $('.e_nom').editable(function (value, settings) {
+        id_ordinateur = $(this).attr("class").split(" ")[1];
+        url = "/computers/mod/a/nom/id_ordinateur/"+id_ordinateur+"/nom/"+value;
+        $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_nom')?>") : alerts("<?=$this->translate->_('mod_nom')?>");
+                    });
+        return(value);
+  },{
+    tooltip   : "Click to edit...",
+    style  : "inherit"
+  });
+  $('.e_description').editable(function (value, settings) {
+        id_ordinateur = $(this).attr("class").split(" ")[1];
+        url = "/computers/mod/a/description/id_ordinateur/"+id_ordinateur+"/description/"+value;
+        $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_desc')?>") : alerts("<?=$this->translate->_('mod_desc')?>");
+                    });
+        return(value);
+  },{
+    tooltip   : "Click to edit...",
+    style  : "inherit"
+  });
+});
+</script>
+<div id="data-computers">
+    <div class="title"><?=$this->translate->_('Gestion_Ordinateur')?></div>
+    <?php if ($this->waitingComputers == 1) { ?>
+        <div class="message-info"><?=$this->translate->_('validation')?></div>
+    <?php } else if ($this->waitingComputers > 1) { ?>
+        <div class="message-info"><?=$this->translate->_('validations1').$this->waitingComputers.$this->translate->_('validations2')?></div>
+    <?php } else { ?>
+        <div class="message-info"><p></p></div>
+    <?php } ?>
+    <table cellpadding="0" cellspacing="0" border="0" class="display" id="datatable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th><?=$this->translate->_('nom')?></th>
+                <th><?=$this->translate->_('description')?></th>
+                <th><?=$this->translate->_('groupe')?></th>
+                <th><?=$this->translate->_('statut')?></th>
+                <th><?=$this->translate->_('Type')?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    //http://www.sprymedia.co.uk/dataTables-1.4/example_zero_config.html
+     foreach ($this->allComputers as $computer)
+     { ?>
+        <tr>
+            <td><?=$computer['id_ordinateur']; ?></td>
+            <td class="e_nom <?=$computer['id_ordinateur']; ?>"><? echo $computer['nom']; ?></td>
+            <td class="e_description <?=$computer['id_ordinateur']; ?>"><? echo $computer['description']; ?></td>
+            <td class="e_group <?=$computer['id_ordinateur']; ?>"><? echo $this->groupsArray[$computer['groupe_ordinateur_id_groupe_ordinateur']]; ?></td>
+            <td class="e_status <?=$computer['id_ordinateur']; ?>"><?php echo $computer['statut'] ? $this->translate->_('valide') : $this->translate->_('enattente'); ?></td>
+            <td class="e_type <?=$computer['id_ordinateur']; ?>"><? echo $this->typesArray[$computer['id_ordinateur_type']]; ?></td>
+        </tr>
+<?php }
+?>
+        </tbody>
+    </table>
+</div>
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

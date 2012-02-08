@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/2012/ecoparc/!svn/ver/123/trunk/WebApp/library/Zend/Filter/File
+END
+Decrypt.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/2012/ecoparc/!svn/ver/123/trunk/WebApp/library/Zend/Filter/File/Decrypt.php
+END
+Encrypt.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/2012/ecoparc/!svn/ver/123/trunk/WebApp/library/Zend/Filter/File/Encrypt.php
+END
+LowerCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/2012/ecoparc/!svn/ver/123/trunk/WebApp/library/Zend/Filter/File/LowerCase.php
+END
+Rename.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/2012/ecoparc/!svn/ver/123/trunk/WebApp/library/Zend/Filter/File/Rename.php
+END
+UpperCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/2012/ecoparc/!svn/ver/123/trunk/WebApp/library/Zend/Filter/File/UpperCase.php
+END

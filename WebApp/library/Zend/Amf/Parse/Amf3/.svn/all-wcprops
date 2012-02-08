@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/2012/ecoparc/!svn/ver/126/trunk/WebApp/library/Zend/Amf/Parse/Amf3
+END
+Serializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/126/trunk/WebApp/library/Zend/Amf/Parse/Amf3/Serializer.php
+END
+Deserializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/2012/ecoparc/!svn/ver/126/trunk/WebApp/library/Zend/Amf/Parse/Amf3/Deserializer.php
+END

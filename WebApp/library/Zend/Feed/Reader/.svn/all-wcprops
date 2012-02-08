@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Reader
+END
+Collection.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Reader/Collection.php
+END
+FeedSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Reader/FeedSet.php
+END
+EntryInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Reader/EntryInterface.php
+END
+FeedInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Reader/FeedInterface.php
+END
+EntryAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Reader/EntryAbstract.php
+END
+FeedAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Reader/FeedAbstract.php
+END

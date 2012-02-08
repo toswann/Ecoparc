@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Response/IpLocation
+END
+IPAddressLocationType.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Response/IpLocation/IPAddressLocationType.php
+END
+CityType.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Response/IpLocation/CityType.php
+END
+LocateIPResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Response/IpLocation/LocateIPResponse.php
+END
+LocateIPResponseType.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Response/IpLocation/LocateIPResponseType.php
+END
+RegionType.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Response/IpLocation/RegionType.php
+END
+GeoCoordinatesType.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Response/IpLocation/GeoCoordinatesType.php
+END

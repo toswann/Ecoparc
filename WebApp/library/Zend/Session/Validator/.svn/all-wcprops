@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/2012/ecoparc/!svn/ver/71/trunk/WebApp/library/Zend/Session/Validator
+END
+HttpUserAgent.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/2012/ecoparc/!svn/ver/71/trunk/WebApp/library/Zend/Session/Validator/HttpUserAgent.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/2012/ecoparc/!svn/ver/71/trunk/WebApp/library/Zend/Session/Validator/Interface.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/71/trunk/WebApp/library/Zend/Session/Validator/Abstract.php
+END

@@ -1,0 +1,5 @@
+database=mysql
+db_user=root
+db_pwd=
+nextRequest=5
+auditMode=true

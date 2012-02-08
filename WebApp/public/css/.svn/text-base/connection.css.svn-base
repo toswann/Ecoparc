@@ -1,0 +1,102 @@
+/*
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* Architecture */
+
+body{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family:'Lucida Grande';
+    font-size: 12px;
+/*    background-image: url('../images/background-ecoparc2.png');
+    background-repeat: repeat;*/
+    background-color: #60aa01;
+}
+/* Connection */
+
+#connection {
+    width:400px;
+    margin:auto;
+    margin-top: 100px;
+    text-align: center;
+    background-color: #333333;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-box-shadow: 0px 0px 200px #333333; /* les parametres sont : marge gauche, haute, l'etendu et la couleur*/
+    -o-box-shadow: 0px 0px 200px #333333;
+    -webkit-box-shadow: 0px 0px 200px #333333;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#connection_form {
+    margin:0;
+    width:400px;
+    text-align: left;
+    color: #a3db2c;
+}
+
+#connection_form #email-label, #connection_form #password-label {
+    float:left;
+    margin-left: 80px;
+    padding-top: 3px;
+    width:100px;
+}
+
+
+#connection_form dd, #connection_form dt {
+    margin-bottom: 10px;
+}
+
+#connection_form #submit-element {
+    margin-left: 150px;
+}
+
+#connection_form li {
+    color: red;
+}
+
+#copy {
+   padding-top:50px;
+   width:400px;
+   margin:auto;
+   color: #333333;
+   text-align: center;
+}
+
+#license {
+    position:absolute;
+    width:100%;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 200px;
+    color: #333333;
+}
+
+#license div {
+    width:450px;
+    margin:auto;
+}
+
+#license div a {
+        text-decoration: none;
+        color:#333333;
+}
+
+#license div a img {
+    margin-bottom: 5px;
+}

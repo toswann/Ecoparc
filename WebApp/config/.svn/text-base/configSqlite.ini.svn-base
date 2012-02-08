@@ -1,0 +1,31 @@
+;
+;This file is part of Ecoparc.
+;
+;Ecoparc is free software: you can redistribute it and/or modify
+;it under the terms of the GNU General Public License as published by
+;the Free Software Foundation, either version 3 of the License, or
+;(at your option) any later version.
+;
+;Ecoparc is distributed in the hope that it will be useful,
+;but WITHOUT ANY WARRANTY; without even the implied warranty of
+;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;GNU General Public License for more details.
+;
+;You should have received a copy of the GNU General Public License
+;along with Ecoparc.  If not, see <http:;www.gnu.org/licenses/>.
+;
+[general]
+;db.adapter = "PDO_MYSQL"
+db.params.host = "localhost"
+db.params.port = "8889"
+db.params.username = "root"
+db.params.password = "eipbilantech"
+db.params.dbname = "eip_webapp"
+srv.nextRequest = "1"
+phpSettings.date.timezone = "Europe/Paris"
+auditMode = "completed"
+startDate = "01/11/2011"
+endDate = "30/11/2011"
+
+db.adapter = PDO_SQLITE
+db.params.dbname =  APPLICATION_PATH "/../../db/eip_webapp_compiled.db3"

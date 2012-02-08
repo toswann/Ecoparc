@@ -1,0 +1,132 @@
+/*
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* 
+    Document   : reporting
+    Created on : 5 nov. 2011, 15:53:35
+    Author     : Gordan Djogasevic
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#reporting-menu {
+    margin-top:20px;
+    width:808px;
+    height:150px;
+    border:0px solid black;
+}
+
+.reporting-button {
+    float:left;
+    width:202px;
+    border:0px solid black;
+    height:100px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+.graph-container {
+    margin-top: 30px;
+    width:900px;
+}
+
+#reporting-computer {
+    margin-left:50px;
+}
+
+
+#reporting-form {
+    margin-top:20px;
+    width:867px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:2px solid #60aa01;
+    padding: 15px;
+    background-color: #F7F7F7;
+}
+
+.step {
+    height:50px;
+}
+
+.step .left {
+    float:left;
+}
+
+.left.but {
+    margin-left: 217px;
+    margin-right: 30px;
+}
+
+.step .text {
+    width:200px;
+    font-size: 14px;
+    padding-top: 5px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.text {
+        font-size: 14px;
+
+}
+
+.step .input_date {
+  background: #fff url('../images/chosen-sprite-.png') no-repeat 100% -22px;
+  background: url('../images/chosen-sprite-.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+  background: url('../images/chosen-sprite-.png') no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url('../images/chosen-sprite-.png') no-repeat 100% -22px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: url('../images/chosen-sprite-.png') no-repeat 100% -22px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+  background: url('../images/chosen-sprite-.png') no-repeat 100% -22px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  background: url('../images/chosen-sprite-.png') no-repeat 100% -22px, linear-gradient(top, #ffffff 85%,#eeeeee 99%);
+  margin-right: 15px;
+  padding: 4px 5px 4px 0px;
+  outline: 0;
+  border: 1px solid #aaa;
+  font-family: sans-serif;
+  font-size: 1em;
+  width:90px;
+}
+
+
+.chzn-select.ordi {
+    width:600px;
+}
+
+.chzn-container {
+        margin-left: 10px;
+}
+
+
+.hide {
+    display:none;
+}
+
+.active {
+    display:block;
+}
+
+#axis-select_chzn {
+    width:100px;
+}

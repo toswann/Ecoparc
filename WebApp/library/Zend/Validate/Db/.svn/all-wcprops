@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/2012/ecoparc/!svn/ver/45/trunk/WebApp/library/Zend/Validate/Db
+END
+NoRecordExists.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/45/trunk/WebApp/library/Zend/Validate/Db/NoRecordExists.php
+END
+RecordExists.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/2012/ecoparc/!svn/ver/45/trunk/WebApp/library/Zend/Validate/Db/RecordExists.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/2012/ecoparc/!svn/ver/45/trunk/WebApp/library/Zend/Validate/Db/Abstract.php
+END

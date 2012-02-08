@@ -1,0 +1,10 @@
+[Desktop Entry]
+Exec=ecoparc
+Icon=ecoparc
+Type=Application
+Terminal=false
+Name=Ecoparc
+GenericName=GreenIt solution;
+MimeType=text/x-c++src;text/x-c++hdr;text/x-xsrc;application/x-designer;
+Categories=GreenIt;
+Icon=ecoparc

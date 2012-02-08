@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/Delicious
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/Delicious/Exception.php
+END
+SimplePost.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/Delicious/SimplePost.php
+END
+PostList.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/Delicious/PostList.php
+END
+Post.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/Delicious/Post.php
+END

@@ -1,0 +1,49 @@
+;
+;This file is part of Ecoparc.
+;
+;Ecoparc is free software: you can redistribute it and/or modify
+;it under the terms of the GNU General Public License as published by
+;the Free Software Foundation, either version 3 of the License, or
+;(at your option) any later version.
+;
+;Ecoparc is distributed in the hope that it will be useful,
+;but WITHOUT ANY WARRANTY; without even the implied warranty of
+;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;GNU General Public License for more details.
+;
+;You should have received a copy of the GNU General Public License
+;along with Ecoparc.  If not, see <http:;www.gnu.org/licenses/>.
+;
+;application
+error = "Erreur"
+
+;jquery.dataTable
+sProcessing = "Traitement en cours..."
+sLengthMenu = "Afficher _MENU_ éléments"
+sZeroRecords = "Aucun élément à afficher"
+sEmptyTable = "Aucune donnée disponible"
+sInfo = "Affichage de l'élement _START_ à _END_ sur _TOTAL_ éléments"
+sInfoEmpty = "Affichage de l'élement 0 à 0 sur 0 éléments"
+sInfoFiltered = "(filtré de _MAX_ éléments au total)"
+sSearch = "Rechercher :"
+sFirst = "Premier"
+sPrevious = "Précédent"
+sNext = "Suivant"
+sLast = "Dernier"
+
+;jquery.weekcalendar
+shortDays = "['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam']"
+longDays = "['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']"
+new_event_text = "Nouvel évènement"
+timeSeparator = "à"
+
+;weekcalendar-ecoparc
+new_event = "Nouvel évènement"
+cant_modify_event = "Impossible de modifier cet évènement"
+event_modified = "Evènement ajouté."
+save = "Sauvegarder"
+cancel = "annuler"
+cant_modify_plan = "Impossible de modifier le planning."
+plan_modified = "Planning modifié."
+cant_delete_plan = "Impossible de supprimer le planning."
+plan_deleted = "Planning supprimé."

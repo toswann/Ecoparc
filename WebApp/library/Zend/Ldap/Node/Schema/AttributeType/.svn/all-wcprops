@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/77/trunk/WebApp/library/Zend/Ldap/Node/Schema/AttributeType
+END
+ActiveDirectory.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/2012/ecoparc/!svn/ver/77/trunk/WebApp/library/Zend/Ldap/Node/Schema/AttributeType/ActiveDirectory.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/2012/ecoparc/!svn/ver/77/trunk/WebApp/library/Zend/Ldap/Node/Schema/AttributeType/Interface.php
+END
+OpenLdap.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/2012/ecoparc/!svn/ver/77/trunk/WebApp/library/Zend/Ldap/Node/Schema/AttributeType/OpenLdap.php
+END

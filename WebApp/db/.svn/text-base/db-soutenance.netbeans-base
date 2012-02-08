@@ -1,0 +1,252 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Serveur: localhost
+-- Généré le : Ven 09 Septembre 2011 à 19:40
+-- Version du serveur: 5.1.37
+-- Version de PHP: 5.2.11
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Base de données: `eip_webapp`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reporting`
+--
+
+CREATE TABLE IF NOT EXISTS `reporting` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_ordinateur` int(11) NOT NULL,
+  `is_audit` enum('0','1') NOT NULL,
+  `date` datetime NOT NULL,
+  `nb_cycle` int(11) NOT NULL,
+  `intervalle` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+
+--
+-- Contenu de la table `reporting`
+--
+
+INSERT INTO `reporting` (`id`, `id_ordinateur`, `is_audit`, `date`, `nb_cycle`, `intervalle`) VALUES
+(1, 1, '0', '2011-12-05 09:00:00', 12, 15),
+(4, 1, '0', '2011-12-05 13:00:00', 20, 15),
+(5, 1, '0', '2011-12-06 09:00:00', 12, 15),
+(6, 1, '0', '2011-12-06 13:00:00', 19, 15),
+(7, 1, '0', '2011-12-07 10:00:00', 8, 15),
+(8, 1, '0', '2011-12-07 13:15:00', 19, 15),
+(9, 1, '0', '2011-12-08 09:00:00', 10, 15),
+(10, 1, '0', '2011-12-08 12:30:00', 20, 15),
+(11, 1, '0', '2011-12-09 09:00:00', 12, 15),
+(12, 1, '0', '2011-12-09 13:00:00', 21, 15),
+(13, 1, '0', '2011-12-12 09:30:00', 10, 15),
+(14, 1, '0', '2011-12-12 13:30:00', 20, 15),
+(15, 1, '0', '2011-12-13 08:30:00', 12, 15),
+(16, 1, '0', '2011-12-13 13:30:00', 23, 15);
+
+
+--
+-- Structure de la table `groupe_ordinateur`
+--
+
+CREATE TABLE `groupe_ordinateur` (
+  `id_groupe_ordinateur` int(11) NOT NULL AUTO_INCREMENT,
+  `planning_id_planning` int(11) NOT NULL,
+  `nom` varchar(100) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id_groupe_ordinateur`,`planning_id_planning`),
+  KEY `fk_groupe_ordinateur_planning1` (`planning_id_planning`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `groupe_ordinateur`
+--
+
+INSERT INTO `groupe_ordinateur` VALUES(1, 1, 'Defaut', 'Groupe par defaut');
+INSERT INTO `groupe_ordinateur` VALUES(2, 2, 'Devellopeurs', 'Groupe de dÃ©veloppeurs');
+INSERT INTO `groupe_ordinateur` VALUES(3, 4, 'Marketing', 'Groupe de marketing');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ordinateur`
+--
+
+CREATE TABLE `ordinateur` (
+  `id_ordinateur` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(100) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `groupe_ordinateur_id_groupe_ordinateur` int(11) NOT NULL,
+  `statut` enum('0','1') DEFAULT NULL,
+  `mac_address` varchar(17) DEFAULT NULL,
+  `id_ordinateur_type` int(11) NOT NULL,
+  PRIMARY KEY (`id_ordinateur`),
+  KEY `fk_ordinateur_groupe_ordinateur` (`groupe_ordinateur_id_groupe_ordinateur`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `ordinateur`
+--
+
+INSERT INTO `ordinateur` VALUES(1, '192.168.1.1', '', 1, '0', '00:11:18:5b:3a:1f', 1);
+INSERT INTO `ordinateur` VALUES(2, '192.168.2.2', '', 1, '0', '00:11:13:6z:4g:1e', 1);
+INSERT INTO `ordinateur` VALUES(3, '192.168.5.1', NULL, 2, '1', '00:12:24:8h:3a:9q', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `planning`
+--
+
+CREATE TABLE `planning` (
+  `id_planning` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(100) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id_planning`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Contenu de la table `planning`
+--
+
+INSERT INTO `planning` VALUES(1, 'Defaut', 'Planning par defaut');
+INSERT INTO `planning` VALUES(2, '35h', 'Planning 35h');
+INSERT INTO `planning` VALUES(3, 'Vacances', 'Planning vacances');
+INSERT INTO `planning` VALUES(4, 'Economie', 'Economie');
+INSERT INTO `planning` VALUES(6, 'Soutenance', 'Planning de dÃ©monstration');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `planning_taches`
+--
+
+CREATE TABLE `planning_taches` (
+  `id_planning_tache` int(11) NOT NULL AUTO_INCREMENT,
+  `planning_id_planning` int(11) NOT NULL,
+  `nom` varchar(100) NOT NULL,
+  `jour` enum('0','1','2','3','4','5','6') DEFAULT NULL,
+  `heure_debut` time DEFAULT NULL,
+  `heure_fin` time DEFAULT NULL,
+  `action` enum('0','1','2') DEFAULT NULL,
+  PRIMARY KEY (`id_planning_tache`),
+  KEY `fk_planning_taches_planning1` (`planning_id_planning`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=107 ;
+
+--
+-- Contenu de la table `planning_taches`
+--
+
+INSERT INTO `planning_taches` VALUES(2, 1, 'asdsa', '', '00:00:00', '00:00:00', '0');
+INSERT INTO `planning_taches` VALUES(3, 1, 'asdsa', '', '00:00:00', '00:00:00', '0');
+INSERT INTO `planning_taches` VALUES(4, 1, 'asdsa', '', '02:30:00', '03:45:00', '0');
+INSERT INTO `planning_taches` VALUES(5, 1, 'test1', '', '02:00:00', '03:30:00', '0');
+INSERT INTO `planning_taches` VALUES(6, 1, 'test2', '', '04:30:00', '06:30:00', '1');
+INSERT INTO `planning_taches` VALUES(7, 1, 'test3', '', '08:15:00', '08:30:00', '1');
+INSERT INTO `planning_taches` VALUES(8, 1, 'adskjdaslk', '', '04:00:00', '05:30:00', '1');
+INSERT INTO `planning_taches` VALUES(9, 1, '', '', '07:30:00', '07:45:00', '1');
+INSERT INTO `planning_taches` VALUES(29, 1, 'dsjfhjlds', '', '01:30:00', '03:00:00', '0');
+INSERT INTO `planning_taches` VALUES(30, 1, '', '', '21:00:00', '21:15:00', '0');
+INSERT INTO `planning_taches` VALUES(31, 1, 'kjkjhkj', '', '14:30:00', '00:00:00', '0');
+INSERT INTO `planning_taches` VALUES(74, 4, '', '1', '17:15:00', '22:30:00', '1');
+INSERT INTO `planning_taches` VALUES(80, 6, 'nuit', '2', '00:00:00', '09:00:00', '0');
+INSERT INTO `planning_taches` VALUES(81, 6, 'nuit', '3', '00:00:00', '09:00:00', '0');
+INSERT INTO `planning_taches` VALUES(82, 6, 'nuit', '1', '00:00:00', '09:00:00', '0');
+INSERT INTO `planning_taches` VALUES(83, 6, 'Nuit', '4', '00:00:00', '09:00:00', '0');
+INSERT INTO `planning_taches` VALUES(84, 6, 'Nuit', '5', '00:00:00', '09:00:00', '0');
+INSERT INTO `planning_taches` VALUES(86, 6, 'weekend', '0', '00:00:00', '23:45:00', '0');
+INSERT INTO `planning_taches` VALUES(87, 6, 'soir', '1', '18:00:00', '23:45:00', '0');
+INSERT INTO `planning_taches` VALUES(88, 6, 'soir', '2', '18:00:00', '23:45:00', '0');
+INSERT INTO `planning_taches` VALUES(89, 6, 'soir', '3', '18:00:00', '23:45:00', '0');
+INSERT INTO `planning_taches` VALUES(90, 6, 'soir', '4', '18:00:00', '23:45:00', '0');
+INSERT INTO `planning_taches` VALUES(91, 6, 'soir', '5', '18:00:00', '23:45:00', '0');
+INSERT INTO `planning_taches` VALUES(92, 6, 'dejeuner', '1', '12:15:00', '13:45:00', '2');
+INSERT INTO `planning_taches` VALUES(93, 6, 'dejeuner', '2', '12:15:00', '13:45:00', '2');
+INSERT INTO `planning_taches` VALUES(94, 6, 'dejeuner', '3', '12:15:00', '13:45:00', '2');
+INSERT INTO `planning_taches` VALUES(95, 6, 'dejeuner', '4', '12:15:00', '13:45:00', '2');
+INSERT INTO `planning_taches` VALUES(96, 6, 'dejeuner', '5', '12:15:00', '13:45:00', '2');
+INSERT INTO `planning_taches` VALUES(97, 6, 'work', '1', '09:00:00', '12:15:00', '1');
+INSERT INTO `planning_taches` VALUES(98, 6, 'work', '2', '09:00:00', '12:15:00', '1');
+INSERT INTO `planning_taches` VALUES(99, 6, 'work', '3', '09:00:00', '12:15:00', '1');
+INSERT INTO `planning_taches` VALUES(100, 6, 'work', '4', '09:00:00', '12:15:00', '1');
+INSERT INTO `planning_taches` VALUES(101, 6, 'work', '5', '09:00:00', '12:15:00', '1');
+INSERT INTO `planning_taches` VALUES(102, 6, 'work', '1', '13:45:00', '18:00:00', '1');
+INSERT INTO `planning_taches` VALUES(103, 6, 'work', '2', '13:45:00', '18:00:00', '1');
+INSERT INTO `planning_taches` VALUES(104, 6, 'work', '3', '13:45:00', '18:00:00', '1');
+INSERT INTO `planning_taches` VALUES(105, 6, 'work', '4', '13:45:00', '18:00:00', '1');
+INSERT INTO `planning_taches` VALUES(106, 6, 'work', '5', '13:45:00', '18:00:00', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(65) DEFAULT NULL,
+  `type` enum('0','1','2') DEFAULT NULL,
+  PRIMARY KEY (`id_user`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` VALUES(7, 'Clement', 'bb8b20c99f94d079cbd72677168255b7', '0');
+INSERT INTO `users` VALUES(5, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2');
+INSERT INTO `users` VALUES(6, 'Julien', 'b8df4a540960f5b8c388864c61f1dce8', '0');
+INSERT INTO `users` VALUES(8, 'Cyril', '4abd06d9b49d0556e5d974a79b7b3f01', '2');
+INSERT INTO `users` VALUES(9, 'Gordan', '936571152c8407da77dc2224e8842c5f', '0');
+INSERT INTO `users` VALUES(10, 'Axel', '3d7c02a4626f82838c29d340046234ff', '0');
+INSERT INTO `users` VALUES(11, 'Arnaud', '187c7bed2c7d4b31ded1e032ad2f4821', '0');
+INSERT INTO `users` VALUES(12, 'Swann', 'abf52aa54ba6d909e8852b2f638b54f9', '0');
+INSERT INTO `users` VALUES(13, 'Denis', '40b493a50ff330acc98b3bbfafcc40f2', '0');
+INSERT INTO `users` VALUES(14, 'Gaspard', 'b4c522498452ed2be7b6781b8cadf937', '0');
+INSERT INTO `users` VALUES(15, 'Xavier', 'd15ced66c1d28b310ea14eec0159df2b', '0');
+
+--
+-- Table structure for table `ordinateur_type`
+--
+
+CREATE TABLE `ordinateur_type` (
+  `id_ordinateur_type` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(100) NOT NULL,
+  `conso` int(11) NOT NULL,
+  PRIMARY KEY (`id_ordinateur_type`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `ordinateur_type`
+--
+
+INSERT INTO `ordinateur_type` VALUES(1, 'defaultType', 150);
+
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `groupe_ordinateur`
+--
+ALTER TABLE `groupe_ordinateur`
+  ADD CONSTRAINT `fk_groupe_ordinateur_planning1` FOREIGN KEY (`planning_id_planning`) REFERENCES `planning` (`id_planning`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `ordinateur`
+--
+ALTER TABLE `ordinateur`
+  ADD CONSTRAINT `fk_ordinateur_groupe_ordinateur` FOREIGN KEY (`groupe_ordinateur_id_groupe_ordinateur`) REFERENCES `groupe_ordinateur` (`id_groupe_ordinateur`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `planning_taches`
+--
+ALTER TABLE `planning_taches`
+  ADD CONSTRAINT `fk_planning_taches_planning1` FOREIGN KEY (`planning_id_planning`) REFERENCES `planning` (`id_planning`) ON DELETE NO ACTION ON UPDATE NO ACTION;

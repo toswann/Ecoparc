@@ -1,0 +1,135 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<div id="standard-content">
+<script type="text/javascript">
+var typeArray = { '0' : 'Simple utilisateur', '1' : 'Utilisateur reporting', '2' : 'Administrateur'};
+$(document).ready(function() {
+  $('.e_type').editable(function (value, settings) {
+        id_user = $(this).attr("class").split(" ")[1];
+        url = "/users/mod/a/type/id_user/"+id_user+"/type/"+value;
+        $.get(url, function(d) {
+             a = (d != "ok") ? errors("<?=$this->translate->_('mod_error')?>") : alerts("<?=$this->translate->_('mod_valid')?>");
+        });
+        return(typeArray[value]);
+  },{
+     data   :  typeArray,
+     type   : 'select',
+     submit : 'OK'
+  });
+   $('.e_username').editable(function (value, settings) {
+        id_user = $(this).attr("class").split(" ")[1];
+        url = "/users/mod/a/username/id_user/"+id_user+"/username/"+value;
+        $.get(url, function(d) {
+             a = (d != "ok") ? errors("<?=$this->translate->_('mod_error')?>") : alerts("<?=$this->translate->_('mod_valid')?>");
+        });
+        return(value);
+  },{
+    tooltip   : "Click to edit...",
+    style  : "inherit"
+  });
+  $('.del_user').click(function () {
+        id_user = $(this).attr("class").split(" ")[1];
+        url = "/users/del/id_user/"+id_user;
+        $.get(url, function(d) {
+             a = (d != "ok") ? errors("<?=$this->translate->_('sup_error')?>") : alerts("<?=$this->translate->_('sup_valid')?>");
+             location.reload(true);
+        });
+   });
+
+  
+  $("#form-user").dialog({
+      autoOpen: false,
+      height: 350,
+      width: 350,
+      modal: true,
+      closeOnEscape: true,
+      title : "<?=$this->translate->_('create_new_user')?>"
+  });
+
+  if ($(".errors").html()) {
+      $( "#form-user" ).dialog( "open" );
+  }
+
+  $("#Send").button();
+
+  $( "#create-user" ).button();
+
+  $( "#create-user" ).click(function() {
+      $( "#form-user" ).dialog( "open" );
+  });
+
+});
+</script>
+<div id="data-users">
+<div class="title"><?=$this->translate->_('Gestion_Utilisateur')?></div>
+<div class="create"><button id="create-user"><?=$this->translate->_('ajouter_ut')?></button></div>
+<a href="<?php echo $this->url(array('controller'=>'users', 'action'=>'add'));?>"></a>
+    <table cellpadding="0" cellspacing="0" border="0" class="display" id="datatable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th><?=$this->translate->_('Username')?></th>
+                <th><?=$this->translate->_('Type')?></th>
+                <th><?php echo $this->translate->_('Supprimer'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+             foreach ($this->allUsers as $user)
+             { ?>
+                <tr>
+                    <td><? echo $user['id_user']; ?></td>
+                    <td class="e_username <?=$user['id_user']; ?>"><? echo $user['username']; ?></td>
+                    <td class="e_type <?=$user['id_user']; ?>" ><? echo $this->translate->_('user_'.$user['type']); ?></td>
+                    <td class="del_user <?=$user['id_user']; ?> cursorpointer">
+                        <div class="e_bouton_delete">
+                            <img alt="" onmouseover="this.src = '/images/visu/delete-h.gif'"
+                         onmouseout="this.src = '/images/visu/delete.gif'"
+                         src="/images/visu/delete.gif"/>
+                        </div>
+                    </td>
+                </tr>
+        <?php }
+        ?>
+        </tbody>
+    </table>
+    <div id="form-user">
+    <?php
+
+    if ($this->typeview == 1)
+    {
+        echo '<p class="errors">'.$this->translate->_('already_exist').'</p>';
+    }
+    else if ($this->typeview == 2)
+    {
+        ?>
+        <p>
+            <?php echo '<p class="errors">'.$this->translate->_('new_pass').': '.$this->Password.'</p>'; ?>
+        </p>
+        <?php
+    }
+
+    echo $this->form; ?>
+    
+    </div>
+
+</div>
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Pubsubhubbub
+END
+CallbackInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Pubsubhubbub/CallbackInterface.php
+END
+Publisher.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Pubsubhubbub/Publisher.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Pubsubhubbub/Exception.php
+END
+HttpResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Pubsubhubbub/HttpResponse.php
+END
+CallbackAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Pubsubhubbub/CallbackAbstract.php
+END
+Subscriber.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/2012/ecoparc/!svn/ver/122/trunk/WebApp/library/Zend/Feed/Pubsubhubbub/Subscriber.php
+END

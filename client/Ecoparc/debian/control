@@ -1,0 +1,15 @@
+Source: ecoparc
+Section: unknown
+Priority: extra
+Maintainer: LabEIP <ecoparc_2012@labeip.epitech.eu>
+Build-Depends: debhelper (>= 7.0.50~), libqt4-dev
+Standards-Version: 3.9.1
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://git.debian.org/collab-maint/ecoparc.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/ecoparc.git;a=summary
+
+Package: ecoparc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Ecoparc Client
+ Act on a computer in order to manage power energy planning

@@ -1,0 +1,125 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<div id="standard-content">
+<script type="text/javascript">
+$(document).ready(function() {
+    
+    $("#form-computerstype").dialog({
+      autoOpen: false,
+      height: 350,
+      width: 350,
+      modal: true,
+      closeOnEscape: true,
+      title : "<?=$this->translate->_('create_new_user')?>"
+  });
+
+  if ($(".errors").html()) {
+      $( "#form-computerstype" ).dialog( "open" );
+  }
+
+  $("#Send").button();
+
+  $( "#create-computerstype" ).button();
+
+  $( "#create-computerstype" ).click(function() {
+      $( "#form-computerstype" ).dialog( "open" );
+  });
+  
+    $('.e_conso').editable(function (value, settings) {
+        id_ordinateur_type = $(this).attr("class").split(" ")[1];
+        url = "/computerstype/mod/a/conso/id_ordinateur_type/"+id_ordinateur_type+"/conso/"+value;
+        $.get(url, function(d) {
+             a = (d != "ok") ? errors("<?=$this->translate->_('imp_type')?>") : alerts("<?=$this->translate->_('mod_type')?>");
+        });
+        return(value);
+  },{
+    tooltip   : "Click to edit...",
+    style  : "inherit"
+  });
+  
+    $('.e_nom').editable(function (value, settings) {
+        id_ordinateur_type = $(this).attr("class").split(" ")[1];
+        url = "/computerstype/mod/a/nom/id_ordinateur_type/"+id_ordinateur_type+"/nom/"+value;
+        $.get(url, function(d) {
+             a = (d != "ok") ? errors("<?=$this->translate->_('imp_type')?>") : alerts("<?=$this->translate->_('mod_type')?>");
+        });
+        return(value);
+  },{
+    tooltip   : "Click to edit...",
+    style  : "inherit"
+  });
+
+
+    $('.del_computertype').click(function () {
+        id_ordinateur_type = $(this).attr("class").split(" ")[1];
+        url = "/computerstype/del/id_ordinateur_type/"+id_ordinateur_type;
+        $.get(url, function(d) {
+            a = (d != "ok") ? errors("<?=$this->translate->_('sup_error_type')?>") : alerts("<?=$this->translate->_('sup_valid_type')?>");
+            location.reload(true);
+        });
+   });
+
+  
+
+});
+</script>
+<div id="data-computers">
+    <div class="title"><?=$this->translate->_('Gestion_Type')?></div>
+    <div class="create"><button id="create-computerstype"><?=$this->translate->_('new_group')?></button></div>
+    
+    <table cellpadding="0" cellspacing="0" border="0" class="display" id="datatable">
+        <thead>
+            <tr>
+                <th><?=$this->translate->_('nom')?></th>
+                <th><?=$this->translate->_('conso')?> (W)</th>
+                <th><?=$this->translate->_('supprimer')?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+     foreach ($this->allComputerstype as $computertype)
+     { ?>
+        <tr>
+            <?php if ($computertype['id_ordinateur_type'] != 1) { ?>
+                <td class="e_nom <?=$computertype['id_ordinateur_type']; ?>"><? echo $computertype['nom_type']; ?></td>
+                <td class="e_conso <?=$computertype['id_ordinateur_type']; ?>"><? echo $computertype['conso']; ?></td>
+                <td class="del_computertype <?=$computertype['id_ordinateur_type']; ?> cursorpointer">
+                    <div class="e_bouton_delete">
+                        <img alt="" onmouseover="this.src = '/images/visu/delete-h.gif'"
+                         onmouseout="this.src = '/images/visu/delete.gif'"
+                         src="/images/visu/delete.gif"/>
+                    </div>
+                </td>
+            <?php } else {?>
+                <td class="e_nom <?=$computertype['id_ordinateur_type']; ?>"><? echo $computertype['nom_type']; ?></td>
+                <td class="e_conso <?=$computertype['id_ordinateur_type']; ?>"><? echo $computertype['conso']; ?></td>
+                <td> <?=$this->translate->_('undeletable_type')?></td>
+            <?php } ?>
+        </tr>
+<?php }
+?>
+        </tbody>
+    </table>
+    <div id="form-computerstype">
+        <?= $this->form ?> <!-- http://jqueryui.com/demos/dialog/#modal-form -->
+    </div>
+</div>
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

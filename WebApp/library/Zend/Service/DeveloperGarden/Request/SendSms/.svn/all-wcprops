@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SendSms
+END
+SendFlashSMS.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SendSms/SendFlashSMS.php
+END
+SendSMS.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SendSms/SendSMS.php
+END
+SendSmsAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/DeveloperGarden/Request/SendSms/SendSmsAbstract.php
+END

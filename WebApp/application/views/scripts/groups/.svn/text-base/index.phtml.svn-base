@@ -1,0 +1,171 @@
+<?php
+//
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+//
+?>
+<?php echo $this->render('header/int_header.phtml'); ?>
+<div id="standard-content">
+<!--<a href="<?php echo $this->url(array('controller'=>'users', 'action'=>'add'));?>"><?php echo$this->translate->_('ajouter_ut')?></a>-->
+<script type="text/javascript">
+var planningArray = <?php echo $this->listplanning."}\n" ?>
+$(document).ready(function() {
+<?php
+     foreach ($this->allGroups as $group)
+     { ?>
+              $('.e_planning').editable(function (value, settings) {
+                    group = $(this).attr("class").split(" ")[1];
+                    url = "/groups/mod/a/planning/id_groupe_ordinateur/"+group+"/planning_id_planning/"+value;
+                    $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_plann')?>") : alerts("<?=$this->translate->_('mod_plann')?>");
+                    });
+                            return(planningArray[value]);
+                 },{
+                 data   :  <?php echo $this->listplanning." 'selected':'".$group['planning_id_planning']."'}"; ?>,
+                 type   : 'select',
+                 submit : 'OK'
+              });
+<?php }
+?>
+               $('.e_description').editable(function (value, settings) {
+                    group = $(this).attr("class").split(" ")[1];
+                    url = "/groups/mod/a/description/id_groupe_ordinateur/"+group+"/description/"+value;
+                    $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_desc')?>") : alerts("<?=$this->translate->_('mod_desc')?>");
+                    });
+                    return(value);
+              },{
+                tooltip   : "Click to edit...",
+                style  : "inherit"
+              });
+               $('.e_nom').editable(function (value, settings) {
+                    group = $(this).attr("class").split(" ")[1];
+                    url = "/groups/mod/a/nom/id_groupe_ordinateur/"+group+"/nom/"+value;
+                    $.get(url, function(d) {
+                            a = (d != "ok") ? errors("<?=$this->translate->_('imp_nom')?>") : alerts("<?=$this->translate->_('mod_nom')?>");
+                    });
+                    return(value);
+              },{
+                tooltip   : "Click to edit...",
+                style  : "inherit"
+              });
+              $('.del_group').live("click", function () {
+                  group_id = $(this).attr("class").split(" ")[1];
+                  elem = this;
+                  $("#confirmation").html("");
+                  group_nom = $(elem).parent().children(".e_nom,."+group_id).html();
+                  $("#confirmation").html("<?=$this->translate->_('confirm_del_group')?> " + group_nom + " ?");
+                  $("#confirmation").dialog({
+			resizable: false,
+                        title : "Confirmation",
+                        closeOnEscape: true,
+			buttons: {
+				"Supprimer": function() {
+					$("#confirmation").dialog( "close" );
+                                        url = "/groups/del/id_groupe_ordinateur/"+group_id;
+                                        $.get(url, function(data) {
+                                            if (data != "ok") {
+                                                errors("<?=$this->translate->_('imp_del_group')?>");
+                                            }
+                                            else {
+                                                alerts("<?=$this->translate->_('group_deleted')?>");
+                                                $(elem).parent().remove();
+                                            }
+                                        });
+				},
+				"Annuler": function() {
+					$("#confirmation").dialog("close");
+				}
+			}
+                  });
+               });
+
+              $( "#form-group" ).dialog({
+			autoOpen: false,
+			height: 350,
+			width: 350,
+			modal: true,
+                        closeOnEscape: true,
+                        title : "<?=$this->translate->_('create_new_group')?>"
+		});
+                if ($(".errors").html()) {
+                    $( "#form-group" ).dialog( "open" );
+                }
+
+            $("#Send").button();
+
+            $( "#create-group" ).button();
+
+            $( "#create-group" ).click(function() {
+			$( "#form-group" ).dialog( "open" );
+            });
+
+});
+</script>
+<div id="data-groups">
+    <div id="confirmation"></div>
+    <div class="title"><?=$this->translate->_('Gestion_Groupe')?></div>
+    <div class="create"><button id="create-group"><?=$this->translate->_('new_group')?></button></div>
+    
+    <table cellpadding="0" cellspacing="0" border="0" class="display" id="datatable">
+        <thead>
+            <tr>
+                <th><?=$this->translate->_('id')?></th>
+                <th><?=$this->translate->_('nom_group')?></th>
+                <th><?=$this->translate->_('description')?></th>
+                <th><?=$this->translate->_('planning')?></th>
+                <th><?=$this->translate->_('supprimer')?></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+             foreach ($this->allGroups as $group) {
+                if ($group['id_groupe_ordinateur'] != 1) {
+        ?>
+                <tr>
+                    <td><? echo $group['id_groupe_ordinateur'] ?></td>
+                    <td class="e_nom <?=$group['id_groupe_ordinateur'] ?>"><? echo $group['nom_groupe']; ?></td>
+                    <td class="e_description <?=$group['id_groupe_ordinateur'] ?>"><? echo $group['description']; ?></td>
+                    <td class="e_planning <?=$group['id_groupe_ordinateur'] ?> "><? echo $this->planningArray[$group['planning_id_planning']] ?></td>
+                    <td class="del_group <?=$group['id_groupe_ordinateur'] ?> cursorpointer">
+                        <div class="e_bouton_delete">
+                            <img alt="" onmouseover="this.src = '/images/visu/delete-h.gif'"
+                             onmouseout="this.src = '/images/visu/delete.gif'"
+                             src="/images/visu/delete.gif"/>
+                        </div>
+                    </td>
+                </tr>
+        <?php } else {
+        ?>
+                <tr>
+                    <td><? echo $group['id_groupe_ordinateur'] ?></td>
+                    <td><? echo $group['nom_groupe']; ?></td>
+                    <td><? echo $group['description']; ?></td>
+                    <td><? echo $this->planningArray[$group['planning_id_planning']] ?></td>
+                    <td> <?=$this->translate->_('undeletable')?></td>
+                </tr>
+        <?php
+        }
+        }
+        ?>
+        </tbody>
+    </table>
+    <div id="form-group">
+        <?= $this->form ?> <!-- http://jqueryui.com/demos/dialog/#modal-form -->
+    </div>
+
+</div>
+</div>
+<?php echo $this->render('footer/int_footer.phtml'); ?>

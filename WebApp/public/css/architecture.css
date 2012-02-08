@@ -1,0 +1,237 @@
+/*
+//This file is part of Ecoparc.
+//
+//Ecoparc is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//Ecoparc is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with Ecoparc.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* Architecture */
+
+body{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family:"Lucida Sans", "Lucida Grande","Lucida Sans Unicode", Arial, sans-serif;
+    font-size: 12px;
+}
+
+#global {
+}
+
+#header {
+    width:100%;
+    height:50px;
+    background-image: url('../images/menu/menu-bg.png');
+    background-repeat: repeat-x;
+}
+
+#bandeau {
+    width:1250px;
+}
+
+#menu {
+    margin-top:10px;
+    margin-left:30px;
+    float:left;
+}
+
+#menu ul {
+        margin: 0;
+        padding: 0;
+        height:36px;
+        width:100%;
+}
+
+#menu ul li {
+        margin: 0 5px 0 5px;
+        padding: 5px 0px 5px 0px;
+        list-style: none;
+        float: left;
+        text-align: center;
+        height:36px;
+/*        background-color: #808080;*/
+}
+
+#menu ul li a {
+        float:left;
+        color: #FFFFFF;
+        text-decoration: none;
+        text-shadow: #333333 0px 1px 0px;
+        font-size: 12px;
+        width: auto;
+        padding-left:10px;
+}
+#menu ul li a span{
+        float:left;
+        width: auto;
+        height:30px;
+        padding-right:10px;
+        padding-top: 4px;
+}
+
+#menu ul li a:hover {
+        text-decoration:none;
+        background:url(../images/menu/active-menu_01.png) no-repeat 0 0;
+}
+
+#menu ul li a:hover span {
+        text-decoration:none;
+        background:url(../images/menu/active-menu_03.png) no-repeat right 0;
+}
+
+a.checked_menu {
+        text-decoration:none;
+        background:url(../images/menu/active-menu_01.png) no-repeat 0 0;
+}
+
+a.checked_menu span {
+        text-decoration:none;
+        background:url(../images/menu/active-menu_03.png) no-repeat right 0;
+}
+
+#menu ul li.last {
+        float:right;
+}
+
+#menu ul li.last a {
+        float:right;
+}
+
+#menu ul li.last a span {
+        float:right;
+}
+
+
+/*
+#menu ul li.first {
+    padding-left: 20px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#menu ul li.last {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#menu ul li a {
+        color: #a3db2c;
+        text-decoration: none;
+        line-height: 30px;
+        text-shadow: #333333 0px 1px 0px;
+        font-size: 12px;
+        padding: 0 10px 0 10px;
+        border-right: 1px solid #333333;
+}
+
+
+#menu ul li.last a {
+        border-right: 0;
+}
+
+#menu ul li a:hover {
+        text-shadow: none;
+}
+*/
+
+#submenu {
+        float:left;
+        width:118px;
+        height:42px;
+        background-image: url('../images/menu/logo-couleur.png');
+        background-repeat: no-repeat;
+        margin-top: 10px;
+        margin-left:30px;
+}
+
+
+#big-content {
+    
+}
+
+#standard-content {
+    margin-left: 20px;
+    margin-top: 20px;
+    width:1100px;
+}
+
+#planning-content {
+    height:500px;
+}
+
+#top-view-planning {
+    height:50px;
+}
+
+
+#top-view-planning div.titre {
+    font-size: 20px;
+    float:left;
+    margin-top: 7px;
+    width:800px;
+    text-align: center;
+}
+
+#top-view-planning div.but {
+    margin:10px;
+    float:left;
+    width:200px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+#error-alert {
+    position: absolute;
+    top:120px;
+    left:400px;
+    width:400px;
+    z-index: 50;
+}
+
+.e_bouton_delete {
+    width : 20px; 
+    margin : auto; 
+}
+.e_bouton_view {
+    width : 20px; 
+    margin : auto;
+    border: 0px;
+}
+
+.e_bouton_view img {
+    border: 0px;
+
+}
+
+.title {
+    font-size: 30px;
+    border-bottom: 2px solid #60aa01;
+    width:850px;
+    padding-bottom:5px;
+}
+
+.create {
+    margin: 10px 0px 10px 0px;
+}
+
+.message-info {
+    margin: 20px 0px 20px 0px;
+}
+
+#sous-menu-gestion {
+    
+}

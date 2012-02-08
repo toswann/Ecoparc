@@ -1,0 +1,36 @@
+;
+;This file is part of Ecoparc.
+;
+;Ecoparc is free software: you can redistribute it and/or modify
+;it under the terms of the GNU General Public License as published by
+;the Free Software Foundation, either version 3 of the License, or
+;(at your option) any later version.
+;
+;Ecoparc is distributed in the hope that it will be useful,
+;but WITHOUT ANY WARRANTY; without even the implied warranty of
+;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;GNU General Public License for more details.
+;
+;You should have received a copy of the GNU General Public License
+;along with Ecoparc.  If not, see <http:;www.gnu.org/licenses/>.
+;
+nom = Nom
+description = Description
+groupe = Groupe
+statut = Statut
+valide = "Validé"
+enattente = "En attente"
+imp_group = "Impossible de modifier le groupe."
+imp_stat = "Impossible de modifier le Status."
+imp_nom = "Impossible de modifier le nom."
+imp_desc = "Impossible de modifier la description."
+mod_group = "Groupe modifié."
+mod_stat = "Status modifié."
+mod_nom = "Nom modifié."
+mod_desc = "Description modifiée."
+validation = "Vous avez 1 ordinateur en attente de validation."
+validations1 = "Vous avez "
+validations2 = " ordinateurs en attente de validation."
+
+mod_type = "Type modifié."
+imp_type = "Impossible de modifier le type."

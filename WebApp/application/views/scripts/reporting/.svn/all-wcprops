@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/2012/ecoparc/!svn/ver/729/trunk/WebApp/application/views/scripts/reporting
+END
+generate.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/2012/ecoparc/!svn/ver/678/trunk/WebApp/application/views/scripts/reporting/generate.phtml
+END
+generateaudit.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/2012/ecoparc/!svn/ver/678/trunk/WebApp/application/views/scripts/reporting/generateaudit.phtml
+END
+bygroup.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/2012/ecoparc/!svn/ver/729/trunk/WebApp/application/views/scripts/reporting/bygroup.phtml
+END
+byparc.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/2012/ecoparc/!svn/ver/725/trunk/WebApp/application/views/scripts/reporting/byparc.phtml
+END
+index_tmp.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/2012/ecoparc/!svn/ver/576/trunk/WebApp/application/views/scripts/reporting/index_tmp.phtml
+END
+index.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/2012/ecoparc/!svn/ver/692/trunk/WebApp/application/views/scripts/reporting/index.phtml
+END
+bycomputer.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/2012/ecoparc/!svn/ver/725/trunk/WebApp/application/views/scripts/reporting/bycomputer.phtml
+END

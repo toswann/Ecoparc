@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/2012/ecoparc/!svn/ver/804/trunk/client/Ecoparc/sources
+END
+sysinfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/sysinfo.h
+END
+cpuwindows.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/2012/ecoparc/!svn/ver/469/trunk/client/Ecoparc/sources/cpuwindows.cpp
+END
+cpuwindows.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/cpuwindows.h
+END
+infostore.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/2012/ecoparc/!svn/ver/469/trunk/client/Ecoparc/sources/infostore.cpp
+END
+xmlformat.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/2012/ecoparc/!svn/ver/469/trunk/client/Ecoparc/sources/xmlformat.cpp
+END
+ecoparc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/2012/ecoparc/!svn/ver/798/trunk/client/Ecoparc/sources/ecoparc.cpp
+END
+infostore.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/infostore.h
+END
+xmlformat.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/xmlformat.h
+END
+wwindows.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/2012/ecoparc/!svn/ver/766/trunk/client/Ecoparc/sources/wwindows.cpp
+END
+ecoparc.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/2012/ecoparc/!svn/ver/798/trunk/client/Ecoparc/sources/ecoparc.h
+END
+os.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/2012/ecoparc/!svn/ver/804/trunk/client/Ecoparc/sources/os.cpp
+END
+xmlparsing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/2012/ecoparc/!svn/ver/798/trunk/client/Ecoparc/sources/xmlparsing.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/2012/ecoparc/!svn/ver/802/trunk/client/Ecoparc/sources/main.cpp
+END
+wlinux.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/2012/ecoparc/!svn/ver/469/trunk/client/Ecoparc/sources/wlinux.cpp
+END
+os.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/os.h
+END
+wwindows.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/wwindows.h
+END
+wmac.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/2012/ecoparc/!svn/ver/469/trunk/client/Ecoparc/sources/wmac.cpp
+END
+xmlparsing.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/xmlparsing.h
+END
+sysinfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/2012/ecoparc/!svn/ver/469/trunk/client/Ecoparc/sources/sysinfo.cpp
+END
+wlinux.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/wlinux.h
+END
+wmac.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/2012/ecoparc/!svn/ver/473/trunk/client/Ecoparc/sources/wmac.h
+END

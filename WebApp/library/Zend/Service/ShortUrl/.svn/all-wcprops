@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/ShortUrl
+END
+Shortener.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/ShortUrl/Shortener.php
+END
+JdemCz.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/ShortUrl/JdemCz.php
+END
+AbstractShortener.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/ShortUrl/AbstractShortener.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/ShortUrl/Exception.php
+END
+TinyUrlCom.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/ShortUrl/TinyUrlCom.php
+END
+IsGd.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/ShortUrl/IsGd.php
+END
+MetamarkNet.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Service/ShortUrl/MetamarkNet.php
+END

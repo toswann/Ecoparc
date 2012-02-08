@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/2012/ecoparc/!svn/ver/759/trunk/WebApp/db
+END
+db-soutenance.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/2012/ecoparc/!svn/ver/690/trunk/WebApp/db/db-soutenance.sql
+END
+eip_webapp.db3
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/2012/ecoparc/!svn/ver/735/trunk/WebApp/db/eip_webapp.db3
+END
+eip_webapp_compiled.db3
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/2012/ecoparc/!svn/ver/759/trunk/WebApp/db/eip_webapp_compiled.db3
+END
+eip_shema.db
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/2012/ecoparc/!svn/ver/758/trunk/WebApp/db/eip_shema.db
+END

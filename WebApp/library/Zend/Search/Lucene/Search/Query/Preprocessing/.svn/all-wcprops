@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Query/Preprocessing
+END
+Phrase.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Query/Preprocessing/Phrase.php
+END
+Fuzzy.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Query/Preprocessing/Fuzzy.php
+END
+Term.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/2012/ecoparc/!svn/ver/72/trunk/WebApp/library/Zend/Search/Lucene/Search/Query/Preprocessing/Term.php
+END
