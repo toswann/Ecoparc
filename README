@@ -1,0 +1,8 @@
+This software will allow us to automatically turn off some or all of the computers in the park 
+(except if activity is detected on the machine) and to calibrate automatically the capacity of 
+the machine following the user needs. A form will be filled for every machine: usage, 
+statistics (activity, idle, percentage of use). The interface allow the user to controle every
+computer on the park with the help of groups management, settings applied for a whole group, 
+exctinction of the whole infrastructure, reboot and reporting of the consumption of the park and of 
+every machine.
+http://eip.epitech.eu/2012/ecoparc/
